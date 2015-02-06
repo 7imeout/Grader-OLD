@@ -3,7 +3,8 @@ package course;
 import util.GraderData;
 
 /**
- * Created by Michael on 2/5/2015.
+ * A LetterGrade implements GraderData to provide a letter grade to gradable items.
+ *                                                                           <p>
  */
 public abstract class LetterGrade implements GraderData {
 }
