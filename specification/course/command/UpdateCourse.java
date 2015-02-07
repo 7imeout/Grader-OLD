@@ -3,7 +3,8 @@ package course.command;
 import command.WriteCommand;
 
 /**
- * Created by Michael on 2/5/2015.
+ * Updates the course by altering the data on the server. 
+ * Write, not read
  */
 public abstract class UpdateCourse implements WriteCommand {
 }
