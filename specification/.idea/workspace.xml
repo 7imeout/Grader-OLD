@@ -6,6 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command/Command.java" afterPath="$PROJECT_DIR$/command/Command.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command/CommandHistory.java" afterPath="$PROJECT_DIR$/command/CommandHistory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command/CommandTarget.java" afterPath="$PROJECT_DIR$/command/CommandTarget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/GraderData.java" afterPath="$PROJECT_DIR$/util/GraderData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accesscontrol/Identity.java" afterPath="$PROJECT_DIR$/accesscontrol/Identity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command/ReadCommand.java" afterPath="$PROJECT_DIR$/command/ReadCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accesscontrol/Role.java" afterPath="$PROJECT_DIR$/accesscontrol/Role.java" />
@@ -36,11 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoleManager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RoleManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accesscontrol/RoleManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11460674" vertical-offset="0" max-vertical-offset="890">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
               <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraderData.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/util/GraderData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.05730337" vertical-offset="0" max-vertical-offset="890">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -56,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java" />
         <option value="$PROJECT_DIR$/assignment/command/UpdateAssignmentSubmission.java" />
         <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java" />
         <option value="$PROJECT_DIR$/assignment/command/AccessAssignment.java" />
@@ -107,6 +117,7 @@
         <option value="$PROJECT_DIR$/command/WriteCommand.java" />
         <option value="$PROJECT_DIR$/command/CommandHistory.java" />
         <option value="$PROJECT_DIR$/command/CommandTarget.java" />
+        <option value="$PROJECT_DIR$/util/GraderData.java" />
       </list>
     </option>
   </component>
@@ -868,12 +879,12 @@
       <updated>1423104520850</updated>
       <workItem from="1423104522832" duration="31687000" />
       <workItem from="1423143704373" duration="5956000" />
-      <workItem from="1423269790401" duration="9154000" />
+      <workItem from="1423269790401" duration="9316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46797000" />
+    <option name="totallyTimeSpent" value="46959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -931,14 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="890">
           <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/GraderData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="890">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,8 +1308,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accesscontrol/RoleManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11460674" vertical-offset="0" max-vertical-offset="890">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/GraderData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05730337" vertical-offset="0" max-vertical-offset="890">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>

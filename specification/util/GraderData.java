@@ -1,7 +1,8 @@
 package util;
 
-import java.util.Date;
-
+/**
+ * Data that a ReadCommand can fetch.
+ */
 public interface GraderData {
 
 }
