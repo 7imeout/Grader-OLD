@@ -1,4 +1,4 @@
-package coursemanager.command;
+package course.command;
 
 import command.ReadCommand;
 import course.CourseSnapshot;

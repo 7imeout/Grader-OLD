@@ -24,7 +24,7 @@ public interface CourseAccessor extends GraderObject {
    Collection<StudentRecord> getStudentRecords();
    StudentRecord getStudentRecord(User student);
 
-   Collection<Assignment> getAssignment();
+   Collection<Assignment> getAssignments();
    Collection<AssignmentCategory>  getAssignmentCategories();
 
    Collection<AssignmentSubmission> getAssignmentSubmissions(Assignment assignment);
