@@ -7,7 +7,6 @@
       <change type="MOVED" beforePath="C:\Users\Michael\Dropbox\School\cpe308\grader\specification\course\command\NewCourseCommand.java" afterPath="$PROJECT_DIR$/coursemanager/command/NewCourse.java" />
       <change type="MOVED" beforePath="C:\Users\Michael\Dropbox\School\cpe308\grader\specification\coursemanager\command\AccessCourse.java" afterPath="$PROJECT_DIR$/coursemanager/command/AccessCourses.java" />
       <change type="MOVED" beforePath="C:\Users\Michael\Dropbox\School\cpe308\grader\specification\util\GraderData.java" afterPath="$PROJECT_DIR$/util/GraderObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/command/AccessAssignment.java" afterPath="$PROJECT_DIR$/assignment/command/AccessAssignment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java" afterPath="$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java" afterPath="$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java" afterPath="$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java" />
@@ -80,11 +79,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccessAssignment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AccessAssignment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessUserPersonalData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/command/AccessUserPersonalData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessAssignmentSubmission.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="10" column="108" selection-start-line="10" selection-start-column="108" selection-end-line="10" selection-end-column="108" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessGradeSchema.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course/command/AccessGradeSchema.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="10" column="90" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessAssignmentGrade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="10" column="98" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessLatePolicy.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/course/command/AccessLatePolicy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13725491" vertical-offset="0" max-vertical-offset="867">
+              <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -132,16 +183,11 @@
         <option value="$PROJECT_DIR$/accesscontrol/RoleManager.java" />
         <option value="$PROJECT_DIR$/command/CommandHistory.java" />
         <option value="$PROJECT_DIR$/command/ReadCommand.java" />
-        <option value="$PROJECT_DIR$/course/command/AccessLatePolicy.java" />
-        <option value="$PROJECT_DIR$/course/command/AccessGradeSchema.java" />
-        <option value="$PROJECT_DIR$/user/command/AccessUserPersonalData.java" />
-        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java" />
         <option value="$PROJECT_DIR$/user/student/command/AccessPersonalStudentData.java" />
         <option value="$PROJECT_DIR$/coursemanager/command/AccessCourseSnapshot.java" />
         <option value="$PROJECT_DIR$/coursemanager/CourseManager.java" />
         <option value="$PROJECT_DIR$/coursemanager/command/AccessCourse.java" />
         <option value="$PROJECT_DIR$/coursemanager/command/AccessCourses.java" />
-        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java" />
         <option value="$PROJECT_DIR$/user/student/command/AccessStudentGrade.java" />
         <option value="$PROJECT_DIR$/course/command/NewSnapshop.java" />
         <option value="$PROJECT_DIR$/course/command/UpdateGradeSchema.java" />
@@ -152,15 +198,20 @@
         <option value="$PROJECT_DIR$/command/Command.java" />
         <option value="$PROJECT_DIR$/command/WriteCommand.java" />
         <option value="$PROJECT_DIR$/command/CommandTarget.java" />
-        <option value="$PROJECT_DIR$/assignment/command/AccessAssignment.java" />
         <option value="$PROJECT_DIR$/course/CourseSnapshot.java" />
         <option value="$PROJECT_DIR$/course/CourseModifier.java" />
         <option value="$PROJECT_DIR$/assignment/AssignmentGrade.java" />
-        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java" />
         <option value="$PROJECT_DIR$/course/Course.java" />
         <option value="$PROJECT_DIR$/course/CourseAccessor.java" />
         <option value="$PROJECT_DIR$/course/command/NewCourseCommand.java" />
         <option value="$PROJECT_DIR$/course/command/NewCourse.java" />
+        <option value="$PROJECT_DIR$/assignment/command/AccessAssignment.java" />
+        <option value="$PROJECT_DIR$/user/command/AccessUserPersonalData.java" />
+        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java" />
+        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java" />
+        <option value="$PROJECT_DIR$/course/command/AccessGradeSchema.java" />
+        <option value="$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java" />
+        <option value="$PROJECT_DIR$/course/command/AccessLatePolicy.java" />
       </list>
     </option>
   </component>
@@ -922,12 +973,12 @@
       <updated>1423104520850</updated>
       <workItem from="1423104522832" duration="31687000" />
       <workItem from="1423143704373" duration="5956000" />
-      <workItem from="1423269790401" duration="16101000" />
+      <workItem from="1423269790401" duration="16526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53744000" />
+    <option name="totallyTimeSpent" value="54169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1137,49 +1188,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/command/AccessLatePolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/command/AccessGradeSchema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18053098" vertical-offset="0" max-vertical-offset="565">
-          <caret line="6" column="76" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/command/NewAssignmentCategory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/command/AccessUserPersonalData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21061946" vertical-offset="0" max-vertical-offset="565">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18053098" vertical-offset="0" max-vertical-offset="565">
-          <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,16 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1355,14 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="890">
-          <caret line="7" column="104" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/CourseSnapshot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="890">
@@ -1417,8 +1412,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="588">
+          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/command/AccessUserPersonalData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentSubmission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="10" column="108" selection-start-line="10" selection-start-column="108" selection-end-line="10" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/command/AccessGradeSchema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="10" column="90" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/command/AccessAssignmentGrade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="10" column="98" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/command/AccessLatePolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13725491" vertical-offset="0" max-vertical-offset="867">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
           <folding />
         </state>
       </provider>
