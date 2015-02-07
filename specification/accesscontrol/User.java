@@ -1,10 +1,15 @@
 package accesscontrol;
 
-import accesscontrol.Subject;
 import util.GraderData;
 
-public interface User extends GraderData, Subject {
-   public abstract String getId();
-   public abstract String getFirstName();
-   public abstract String getLastName();
+import java.util.Collection;
+
+/**
+ * An identifiable human granted a Role in the Grader Application.
+ */
+public interface User extends GraderData {
+   String getId();
+   Collection<Identity> getIdentities();
+   String getFirstName();
+   String getLastName();
 }

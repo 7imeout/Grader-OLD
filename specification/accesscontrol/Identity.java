@@ -1,9 +1,9 @@
 package accesscontrol;
 
 /**
- * Created by Michael on 2/5/2015.
+ * Represents a login name (i.e. a Cal Poly username), and its domain (i.e. Cal Poly).
  */
 public interface Identity {
-   String getValue();
+   String getName();
    String getDomain();
 }

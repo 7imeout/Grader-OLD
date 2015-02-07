@@ -2,6 +2,10 @@ package accesscontrol;
 
 import java.util.Collection;
 
+/**
+ * Manages user role assignments. Used by CommandTarget to authorize users
+ * who issue commands.
+ */
 public interface RoleManager {
 
    interface UserRoleAssignment {
