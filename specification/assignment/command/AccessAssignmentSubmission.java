@@ -2,6 +2,7 @@ package assignment.command;
 
 import assignment.AssignmentSubmission;
 import command.ReadCommand;
+import course.Course;
 
 /**
  * Gets the assignment submission from the model.

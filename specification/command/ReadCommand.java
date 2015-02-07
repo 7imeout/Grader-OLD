@@ -1,11 +1,11 @@
 package command;
 
-import util.GraderData;
+import util.GraderObject;
 
 /**
  * An fetch operation that requires permission to execute.
  */
-public interface ReadCommand<T extends GraderData> extends Command
+public interface ReadCommand<T extends GraderObject, S extends GraderObject> extends Command
 {
-   public T get();
+   public T get(S from);
 }

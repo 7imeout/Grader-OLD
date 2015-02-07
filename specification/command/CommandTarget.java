@@ -2,14 +2,14 @@ package command;
 
 import accesscontrol.RoleManager;
 import accesscontrol.Subject;
-import util.GraderData;
+import util.GraderObject;
 
 /**
- * An object that executes an operations that requires permission.
+ * An object that executes an operation that requires permission.
  */
-public interface CommandTarget {
+public interface CommandTarget<S extends GraderObject> {
    CommandHistory getCommandHistory();
    RoleManager getRoleManager();
-   <T extends GraderData> T read(ReadCommand<T> command, Subject invoker);
-   void write(WriteCommand command, Subject invoker);
+   <T extends GraderObject> T read(ReadCommand<T, S> command, Subject invoker);
+   void write(WriteCommand<S> command, Subject invoker);
 }

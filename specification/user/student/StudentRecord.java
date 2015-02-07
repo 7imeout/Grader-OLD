@@ -3,11 +3,11 @@ package user.student;
 import assignment.AssignmentGrade;
 import course.LetterGrade;
 import accesscontrol.User;
-import util.GraderData;
+import util.GraderObject;
 
 import java.util.Collection;
 
-public class StudentRecord implements GraderData {
+public class StudentRecord implements GraderObject {
    int rosterPosition;
    User student;
    String comment;

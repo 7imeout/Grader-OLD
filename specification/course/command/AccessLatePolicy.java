@@ -1,6 +1,7 @@
 package course.command;
 
 import command.ReadCommand;
+import course.Course;
 import course.LatePolicy;
 
 /**

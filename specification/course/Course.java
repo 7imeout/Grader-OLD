@@ -1,11 +1,7 @@
 package course;
 
-import accesscontrol.RoleManager;
 import command.CommandTarget;
-import command.ReadCommand;
-import command.CommandHistory;
-import command.WriteCommand;
-import util.GraderData;
+import util.GraderObject;
 
 /**
  * A Course consists of several fields necessary for class organization. The
@@ -19,9 +15,6 @@ import util.GraderData;
  * to a spreadsheet.
  */
 
-public abstract class Course implements CommandTarget, GraderData {
-   RoleManager userAccess;
-   String name;
-   GradeSchema gradeSchema;
-   LatePolicy latePolicy;
+public interface Course extends CourseAccessor, CourseModifier, CommandTarget {
+   CourseAccessor getCourseSnapshot();
 }

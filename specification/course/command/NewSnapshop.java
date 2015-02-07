@@ -1,6 +1,7 @@
 package course.command;
 
 import command.WriteCommand;
+import course.Course;
 
-public abstract class NewSnapshop implements WriteCommand {
+public interface NewSnapshop extends WriteCommand<Course> {
 }

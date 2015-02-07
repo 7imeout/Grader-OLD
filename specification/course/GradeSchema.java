@@ -1,6 +1,6 @@
 package course;
 
-import util.GraderData;
+import util.GraderObject;
 
 /**
  * A GradeSchema contains a function to convert a raw score to a LetterGrade.
@@ -9,6 +9,6 @@ import util.GraderData;
  * implemented to set a letter grade based on the raw score.
  */
 
-public abstract class GradeSchema implements GraderData {
+public abstract class GradeSchema implements GraderObject {
    public abstract LetterGrade convertRawScore(int raw);
 }

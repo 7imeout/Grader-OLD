@@ -1,6 +1,6 @@
 package assignment;
 
-import util.GraderData;
+import util.GraderObject;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import java.util.Date;
  *  submission.
  */
 
-public class AssignmentSubmission implements GraderData {
+public class AssignmentSubmission implements GraderObject {
    Assignment assignment;
    Date timestamp;
 }

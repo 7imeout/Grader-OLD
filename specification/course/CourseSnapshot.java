@@ -1,10 +1,7 @@
 package course;
 
-import command.ReadCommand;
-import command.WriteCommand;
-import util.GraderData;
+import command.CommandTarget;
 
-public abstract class CourseSnapshot extends Course {
-   public abstract <T extends GraderData> T read(ReadCommand<T> command);
-   public abstract void write(WriteCommand command);
+public interface CourseSnapshot extends CourseAccessor, CommandTarget {
+
 }

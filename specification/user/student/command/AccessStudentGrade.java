@@ -1,6 +1,7 @@
 package user.student.command;
 
 import command.ReadCommand;
+import course.Course;
 import user.student.StudentRecord;
 
 /**
@@ -9,5 +10,5 @@ import user.student.StudentRecord;
  *                                                                           <p>
  */
 
-public abstract class AccessStudentGrade implements ReadCommand<StudentRecord> {
+public abstract class AccessStudentGrade implements ReadCommand<StudentRecord, Course> {
 }

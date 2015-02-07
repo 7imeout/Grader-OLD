@@ -1,6 +1,7 @@
 package command;
 
 import accesscontrol.Role;
+import accesscontrol.Subject;
 
 import java.util.Collection;
 
@@ -11,5 +12,5 @@ import java.util.Collection;
  */
 public interface Command
 {
-   public Collection<Role> getAuthorizedRoles();
+   public boolean isAuthorized(CommandTarget target, Subject subject);
 }

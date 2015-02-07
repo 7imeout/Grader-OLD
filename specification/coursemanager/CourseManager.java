@@ -1,9 +1,8 @@
 package coursemanager;
 
-import accesscontrol.RoleManager;
 import command.CommandTarget;
 import course.Course;
-import course.CourseSnapshot;
+import util.GraderObject;
 
 import java.util.Collection;
 
@@ -14,11 +13,9 @@ import java.util.Collection;
  *                                                                           <p>
  */
 
-public abstract class CourseManager implements CommandTarget {
-   class CourseEntry {
-      public Course course;
-      public CourseSnapshot snapshot;
+public interface CourseManager extends CommandTarget<CourseManager>, GraderObject {
+   interface CourseEntries extends GraderObject {
+      public Collection<Course> getCourses();
    }
-   RoleManager userAccess;
-   Collection<Course> courses;
+   Collection<Course> getCourses();
 }

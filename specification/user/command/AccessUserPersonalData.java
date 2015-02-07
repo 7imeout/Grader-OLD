@@ -2,6 +2,7 @@ package user.command;
 
 import command.ReadCommand;
 import accesscontrol.User;
+import course.Course;
 
 /**
  * Encapsulates all operations that handle a user's request

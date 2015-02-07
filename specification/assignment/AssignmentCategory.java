@@ -1,6 +1,6 @@
 package assignment;
 
-import util.GraderData;
+import util.GraderObject;
 
 import java.util.Collection;
 /** An AssignmentCategory contains an AssignmentCategory parent to which it  
@@ -9,7 +9,7 @@ import java.util.Collection;
  *
  */
 
-public abstract class AssignmentCategory implements GraderData {
+public abstract class AssignmentCategory implements GraderObject {
    AssignmentCategory parent;
    Collection<AssignmentCategory> subcategories;
    Collection<Assignment> assignments;

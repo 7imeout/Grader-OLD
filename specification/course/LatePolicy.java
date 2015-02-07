@@ -1,7 +1,7 @@
 package course;
 
-import util.GraderData;
+import util.GraderObject;
 
-public abstract class LatePolicy implements GraderData{
+public abstract class LatePolicy implements GraderObject {
 
 }

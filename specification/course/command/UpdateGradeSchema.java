@@ -1,9 +1,10 @@
 package course.command;
 
 import command.WriteCommand;
+import course.Course;
 
 /**
- * Created by Michael on 2/5/2015.
+ *
  */
-public abstract class UpdateGradeSchema implements WriteCommand {
+public abstract class UpdateGradeSchema implements WriteCommand<Course> {
 }
