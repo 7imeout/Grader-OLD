@@ -7,7 +7,7 @@ import util.GraderObject;
 
 import java.util.Collection;
 
-/*
+/**
  * Class containing all of the informatoin for a student's record
  * 
  */

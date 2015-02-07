@@ -3,7 +3,7 @@ package course.command;
 import command.WriteCommand;
 
 
-/*
+/**
  * Updates the late policy using write command
  * 
  */
