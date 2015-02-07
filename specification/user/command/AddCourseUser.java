@@ -3,7 +3,8 @@ package user.command;
 import command.WriteCommand;
 
 /**
- * Created by Michael on 2/5/2015.
+ * Encapsulates all operations that handle a user's request
+ * to add a new user to a course in Grader program.
  */
 public abstract class AddCourseUser implements WriteCommand {
 }
