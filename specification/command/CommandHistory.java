@@ -4,6 +4,9 @@ import accesscontrol.Subject;
 
 import java.util.List;
 
+/**
+ * Records command execution events
+ */
 public interface CommandHistory {
    interface CommandEntry {
       Command getCommand();
@@ -15,5 +18,5 @@ public interface CommandHistory {
    List<CommandEntry> getHistory();
    CommandEntry peek();
    CommandEntry pop();
-   void push(WriteCommand command, CommandTarget target, Subject subject);
+   void push(Command command, CommandTarget target, Subject subject);
 }
