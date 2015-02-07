@@ -20,7 +20,6 @@ public interface CourseAccessor extends GraderObject {
    GradeSchema getGradeSchema();
    LatePolicy getLatePolicy();
 
-
    Collection<StudentRecord> getStudentRecords();
    StudentRecord getStudentRecord(User student);
 

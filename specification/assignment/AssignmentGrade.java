@@ -1,5 +1,6 @@
 package assignment;
 
+import accesscontrol.User;
 import course.LetterGrade;
 import util.GraderObject;
 
@@ -9,6 +10,7 @@ import util.GraderObject;
  */
 
 public abstract class AssignmentGrade implements GraderObject {
+   User user;
    Assignment assignment;
    int rawScore;
    LetterGrade letter;

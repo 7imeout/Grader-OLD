@@ -17,4 +17,5 @@ import util.GraderObject;
 
 public interface Course extends CourseAccessor, CourseModifier, CommandTarget {
    CourseAccessor getCourseSnapshot();
+   void setCourseSnapshot(CourseAccessor courseAccessor);
 }

@@ -18,4 +18,5 @@ public interface CourseManager extends CommandTarget<CourseManager>, GraderObjec
       public Collection<Course> getCourses();
    }
    Collection<Course> getCourses();
+   void addCourse(Course course);
 }

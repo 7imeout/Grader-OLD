@@ -1,5 +1,6 @@
 package assignment;
 
+import accesscontrol.User;
 import util.GraderObject;
 
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.Date;
  */
 
 public class AssignmentSubmission implements GraderObject {
+   User user;
    Assignment assignment;
    Date timestamp;
 }
