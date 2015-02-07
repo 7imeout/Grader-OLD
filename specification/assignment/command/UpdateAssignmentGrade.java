@@ -3,7 +3,8 @@ package assignment.command;
 import command.WriteCommand;
 
 /**
- * Created by Michael on 2/5/2015.
+ * Encapsulates all operations that modifty (update) assignment grades
+ * in the Grader program.
  */
 public abstract class UpdateAssignmentGrade implements WriteCommand {
 }
