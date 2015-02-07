@@ -1,11 +1,10 @@
-package user;
+package accesscontrol;
 
-import accesscontrol.Identity;
+import accesscontrol.Subject;
 import util.GraderData;
 
-public abstract class User implements GraderData {
+public interface User extends GraderData, Subject {
    public abstract String getId();
-   public abstract Identity getLoginId();
    public abstract String getFirstName();
    public abstract String getLastName();
 }

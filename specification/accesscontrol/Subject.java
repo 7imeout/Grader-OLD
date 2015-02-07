@@ -1,10 +1,7 @@
 package accesscontrol;
 
-import command.Command;
-
-import java.util.List;
+import java.util.Collection;
 
 public interface Subject {
-   public Identity getIdentity();
-   public boolean isAuthorized(Command command);
+   public Collection<Identity> getIdentities();
 }

@@ -1,17 +1,19 @@
 package command;
 
+import accesscontrol.Subject;
+
 import java.util.List;
 
-public abstract class CommandHistory {
-   class WriteCommandEntry {
-      public WriteCommand command;
-      public CommandTarget target;
+public interface CommandHistory {
+   interface CommandEntry {
+      Command getCommand();
+      CommandTarget getTarget();
+      Subject getSubject();
+      String getTimeStamp();
    }
 
-   List<WriteCommandEntry> history;
-
-   public abstract WriteCommandEntry peek();
-   public abstract WriteCommandEntry pop();
-   public abstract void push(WriteCommand command, CommandTarget target);
-   public abstract void push(WriteCommandEntry entry);
+   List<CommandEntry> getHistory();
+   CommandEntry peek();
+   CommandEntry pop();
+   void push(WriteCommand command, CommandTarget target, Subject subject);
 }

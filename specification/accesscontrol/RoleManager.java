@@ -1,20 +1,18 @@
 package accesscontrol;
 
-import user.UserSet;
-
 import java.util.Collection;
-import java.util.List;
 
-public abstract class RoleManager {
+public interface RoleManager {
 
-   public static interface RoleEntry {
-      public Role role();
-      public UserSet users();
+   interface UserRoleAssignment {
+      Role getRole();
+      User getUser();
    }
 
-   Collection<RoleEntry> users;
+   void assign(Role role, User user);
+   void revoke(Role role, User user);
 
-   public abstract Collection<Identity> get(Role role);
-
-   public abstract List<Role> get(Identity user);
+   Collection<UserRoleAssignment> getUserRoleAssignments();
+   Collection<User> getUsers(Role role);
+   Collection<Role> getRoles(User user);
 }
