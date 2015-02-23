@@ -18,7 +18,7 @@ package assignment
 package command
     (None for now)
 
-package coursemaanger
+package coursemanager
     AccessCourses
     NewCourse
 
