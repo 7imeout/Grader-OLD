@@ -10,6 +10,21 @@ import java.util.Collection;
 
 public interface Assignment extends GraderObject {
    AssignmentCategory getCategory();
-   Collection<AssignmentSubmission> getSubmissions();
+
+    /**
+     * Accessor for the assignement submissions.
+     *
+     * pre: ()
+     * post: (getSubmissions() !=)
+     * @return
+     */
+    /**
+     * Gets the assignment submission from the model.
+     * As an instructor or an admin, the user accesses all submissions made to
+     * the class, and for TAs, students, and public users, the scope of
+     * accessible submissions is determined at runtime.
+     *
+     */
+    Collection<AssignmentSubmission> getSubmissions();
    Collection<AssignmentGrade> getGrades();
 }

@@ -1,7 +1,7 @@
 package command;
 
-import accesscontrol.RoleManager;
-import accesscontrol.Subject;
+import admin.RoleManager;
+import admin.Subject;
 import util.GraderObject;
 
 /**

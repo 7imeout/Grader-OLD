@@ -1,6 +1,6 @@
 package command;
 
-import accesscontrol.Subject;
+import admin.Subject;
 
 import java.util.List;
 

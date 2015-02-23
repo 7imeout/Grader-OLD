@@ -2,7 +2,7 @@ package user.student;
 
 import assignment.AssignmentGrade;
 import course.LetterGrade;
-import accesscontrol.User;
+import admin.User;
 import util.GraderObject;
 
 import java.util.Collection;

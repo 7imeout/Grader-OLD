@@ -1,9 +1,6 @@
 package command;
 
-import accesscontrol.Role;
-import accesscontrol.Subject;
-
-import java.util.Collection;
+import admin.Subject;
 
 /**
  * An operation that requires permission. The Command is executed if and

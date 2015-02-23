@@ -1,8 +1,7 @@
 package user.command;
 
 import command.ReadCommand;
-import accesscontrol.User;
-import course.Course;
+import admin.User;
 import course.CourseAccessor;
 
 /**

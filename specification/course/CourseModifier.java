@@ -1,15 +1,10 @@
 package course;
 
-import accesscontrol.User;
 import assignment.Assignment;
 import assignment.AssignmentCategory;
 import assignment.AssignmentGrade;
 import assignment.AssignmentSubmission;
-import command.CommandTarget;
-import user.student.StudentRecord;
 import util.GraderObject;
-
-import java.util.Collection;
 
 /**
  * Changes course data.

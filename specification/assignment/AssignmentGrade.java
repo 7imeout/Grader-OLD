@@ -1,6 +1,6 @@
 package assignment;
 
-import accesscontrol.User;
+import admin.User;
 import course.LetterGrade;
 import util.GraderObject;
 
