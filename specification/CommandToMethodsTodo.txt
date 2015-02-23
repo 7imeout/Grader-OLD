@@ -1,0 +1,37 @@
+Commands to Move to Methods
+Michael Murphy & Mike Ryu
+
+package assignment
+    AccessAssignment
+    AccessAssignmentCategory
+    AccessAssignmentGrade
+    AccessAssignmentSubmission
+    NewAssignment
+    NewAssignmentCategory
+    NewAssignmentGrade
+    NewAssignmentSubmission
+    UpdateAssignment
+    UpdateAssignmentCategory
+    UpdateAssignmentGrade
+    UpdateAssignmentSubmission
+
+package command
+    (None for now)
+
+package coursemaanger
+    AccessCourses
+    NewCourse
+
+package user
+    AccessUserPersonalData
+    AddCourseUser
+    RemoveCourseUser
+
+package user.student
+    AccessStudentGrade
+    AccessStudentPersonalData
+    AddStudent
+    RemoveStudent
+    UpdateStudentRoster
+
+
