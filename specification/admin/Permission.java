@@ -5,6 +5,9 @@ package admin;
  */
 public enum Permission
 {
+    /* Permissions added by Michael Murphy */
+
+    /* Permissions Added Previously */
     ACCESS_COURSE_NAME,
     ACCESS_COURSE_SNAPSHOT,
     ACCESS_COURSE_GRADE_SCHEMA,
@@ -13,4 +16,6 @@ public enum Permission
     UPDATE_COURSE_NAME,
     UPDATE_COURSE_GRADE_SCHEMA,
     UPDATE_COURSE_LATE_POLICY
+
+    /* Permissions added by Mike Ryu */
 }
