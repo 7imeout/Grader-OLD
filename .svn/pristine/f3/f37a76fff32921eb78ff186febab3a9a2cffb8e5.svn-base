@@ -1,0 +1,88 @@
+<html><head>
+<title>
+2.2.1.  Creating a New Class Spreadsheet
+</title>
+</head>
+<body bgcolor="white">
+<a name="Creating a New Class Spreadsheet">
+<h4>
+2.2.1.  Creating a New Class Spreadsheet
+</h4>
+</a>
+<p>
+To manually create a new class spreadsheet, the user chooses the '<tt>Class</tt>' menu
+command. A list of options will appear and the user chooses
+'<tt>New Class...</tt>' to add a new class; this will take the form of the
+following, Figure 1.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Add Class path">
+<p align="center">
+<img src="images/AddClass1.png">
+</p>
+<p align="center"> Figure 1:  Add Class path.  </p>
+<hr>
+</a>
+<br>
+
+<p>The other commands in the '<tt>Class</tt>' submenu are Manage Class, Grade Schema,
+and Late Policy. These commands will be covered in later scenarios, but for now we
+will focus on just adding a spreadsheet for a new class.</p>
+<p>
+Figure 2 shows the response to the users selection of the 
+'<tt>Class New Class...</tt>' command.
+<br>
+<br>
+</p><hr>
+<a name="Figure Add Class dialog">
+<p align="center">
+<img src="images/AddClass2.png">
+</p>
+<p align="center"> Figure 2:  New Class dialog.  </p>
+<hr>
+</a>
+<br>
+
+<p>The figure shows a dialog box for adding a new class. The dialog box only
+takes in a name in a text box, and can be confirmed with the '<tt>Create Speadsheet</tt>'
+button below. Confirming the class will create a new tab above the spreadsheet that 
+can be selected to switch between multiple classes if applicable.</p>
+
+<p>
+When the user selects the '<tt>Create Spreadsheet</tt>' button, the system
+displays the newly created spreadsheet in Figure 3.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Class Added view">
+<p align="center">
+<img src="images/AddClass3.png">
+</p>
+<p>
+</p><p align="center"> Figure 3:  Class Added view.  </p>
+<hr>
+</a>
+<br>
+
+<p>New classes can be added and dragged to be rearranged in a preferred order. Adding a new
+is required to start a new spreadhseet for editing.
+
+<br>
+<br>
+<br>
+<br>
+</p><hr width="80%" size="3">
+<center>
+<font size="-1">
+<font color="black"> Prev: </font>[none]
+ | <font color="black"> Next: </font><a href="add-student.html">add-student</a>
+ | <font color="black"> Up: </font><a href="file-functions.html">file-functions</a>
+ | <font color="black"> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width="80%" size="3">
+
+
+</body></html>

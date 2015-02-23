@@ -1,0 +1,87 @@
+<html><head>
+<title>
+2.3.4.  Deleting Students
+</title>
+</head>
+<body bgcolor="white">
+<a name="Deleting Students">
+<h4>
+2.3.4.  Deleting Students
+</h4>
+</a>
+
+<p>
+In this scenario, we will take a look at how a user can delete a student, via the '<tt>Student</tt>' menu commands.
+Deleting a student is useful to remove students from a class spreadsheet that have dropped, or are being dropped from,
+the class for whatever reason. Figure 1 shows a sample class ready to delete a student.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Sample Class">
+<p align="center">
+<img src="images/DeleteStudent-1.png">
+</p>
+<p align="center"> Figure 1:  Sample Class.  </p>
+<hr>
+</a>
+<br>
+
+<p>
+To delete a student, the user clicks on the student's row of data in the class spreadsheet. This
+will result in the student being highlighted. Then the user chooses the '<tt>Student</tt>' menu
+command. A list of options will appear and the user chooses '<tt>Delete Student</tt>' to
+remove the student from the class; this will take the form of the following, Figure 2.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Delete Student path">
+<p align="center">
+<img src="images/DeleteStudent-2.png">
+</p>
+<p align="center"> Figure 2: Delete Student path.  </p>
+<hr>
+</a>
+<br>
+
+<p>There is no dialog result for deleting a student. The result will simply be the class spreadsheet displayed
+with the student's data removed from it; this is shown in Figure 3.</p>
+<p>
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Delete Student class">
+<p align="center">
+<img src="images/DeleteStudent-3.png">
+</p>
+<p align="center"> Figure 3:  Delete Student Class result.  </p>
+<hr>
+</a>
+<br>
+
+<p>
+Repeating these functions for deleting students allows a user to delete as many students as they want, simply
+by clicking on the student and using the delete commands.
+
+<br>
+<br>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+</p><hr width="80%" size="3">
+<center>
+<font size="-1">
+<font color="black"> Prev: </font><a href="modify-student.html">modify-student</a>
+ | <font color="black"> Next: </font>None
+ | <font color="black"> Up: </font><a href="managing-students-functions.html">managing-students-functions</a>
+ | <font color="black"> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width="80%" size="3">
+
+
+</body></html>
