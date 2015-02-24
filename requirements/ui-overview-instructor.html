@@ -1,0 +1,153 @@
+<html><head>
+<title>
+2.1.1  User Interface Overview - Instructor View
+</title>
+</head>
+<body bgcolor="white">
+<a name="User Interface Overview">
+<h3>
+2.1.1  User Interface Overview - Instructor
+</h3>
+</a>
+<p>
+When the user initially invokes the Grader Manager and Browser, the screen appears as shown
+in Figure 1.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Initial screen">
+</a><a name="Initial screen">
+<p align="center">
+<img src="images/initial-screen.png">
+</p>
+</a>
+<p align="center"> Figure 1:  Initial screen.  </p>
+<hr>
+
+<br>
+
+The initial display consists of one window: a standard form of pulldown
+command menu and a display of the current grade book.  There is also a quick menu which the user can use to more quickly perform certain key actions. To the right is a graphical representation of grade trends and near the bottom are each category and their associated weight, mean, median, and standard deviation.
+<p>
+Figure 2 shows an expansion of the command menus.
+
+<br>
+<br>
+</p><hr>
+<a name="Figure Expanded command menus">
+</a><a name="Expanded command menus">
+<p align="center">
+<img src="images/navbar.png">
+</p>
+</a>
+<p align="center"> Figure 2:  Expanded command menus.  </p>
+<hr>
+
+<br>
+
+<p>
+</p>
+
+<p>
+The <tt>File</tt> menu contains commands that output the current state of the
+grade book to disk and other endpoints.
+The '<tt>File Save</tt>' command writes the current state of the grade book to
+disk-based storage.
+'<tt>File Publish Student View</tt>' updates the grade book data that is visible
+to students. 
+'<tt>File Commit Final Grades</tt>' reports each student's final grade to the
+Office of the Registrar for official record keeping.
+</p>
+
+<p>
+The <tt>Edit</tt> menu contains commands for manipulating the grade book. 
+'<tt>Edit Undo</tt>' reverts the most recent change that the user made since
+starting the application. The user may invoke undo multiple times to revert more
+that one change.
+'<tt>Edit Redo</tt>' executes the change that undo last reverted. This command
+is only available when no changes have been made since invoking undo. Repeated
+invocations of '<tt>Redo</tt>' will restore undone commands in the order they
+were given.
+'<tt>Edit Cut</tt>' stores the current selection in the user's clipboard
+and removes it from the grade book.
+'<tt>Edit Copy</tt>' stores the current selection in the user's clipboard.
+'<tt>Edit Paste</tt>' inserts the user's clipboard into the grade book at
+currently selected edit point. This command is only available when the user's
+clipboard contains compatible data.
+'<tt>Edit Delete</tt>' removes the current selection from the grade book.
+'<tt>Edit Find</tt>' searches all grade books loaded into the application for a
+given text string. Successive invocations of search with an unchanged search
+string cause the program to search for additional occurrences of the string
+until all occurrences are found.
+'<tt>Edit Clear</tt>' removes all data from a row or column in the grade book.
+</p>
+
+<p>
+The <tt>Class</tt> menu provides commands for creating and managing classes.
+The '<tt>Class New Class...</tt>' command allows the user to create a grade book
+for a new class.
+'<tt>Class Manage Class...</tt>' allows the user to modify the class name.
+'<tt>Class Grade Schema</tt>' allows the user to change the class's grade
+schema. A grade schema defines how a numeric value for a grade maps to a letter
+grade like A, B, C, D, and F.
+'<tt>Class Late Policy...</tt>' allows the user to change the class's late
+policy. A late policy defines the penalty applied to a grade for an assignment 
+that is submitted late.
+'<tt>Permissions...</tt>' allows the instructor to change which commands each user has permissions to perform.
+</p>
+
+<p>
+The <tt>Student</tt> menu contains commands for managing, deleting, adding,
+and grouping students in the class.
+'<tt>Student Group Students</tt>' allows the user to group students together
+in a roster.
+'<tt>Student Add Students</tt>' allows the user to add one or more students to
+the class.
+'<tt>Student Manage Students</tt>' allows the user to manage student positions
+in the roster.
+'<tt>Student Delete Student</tt>' allows the user to delete a student from the 
+current class.
+</p>
+
+<p>
+The <tt>Assignment</tt> menu contains commands for managing assignments.
+'<tt>Assignment New Assignment...</tt>' allows the user to create an assignment
+in the current grade book. 
+'<tt>Assignment New Assignment Category...</tt>' allows the user to create a
+category of assignments in the current grade book.
+</p>
+
+<p>
+The <tt>Graph</tt> menu contains commands for creating graphs and observing 
+class trends.
+'<tt>Graph Histogram</tt>' displays a larger histogram of the class's grade
+distribution.
+'<tt>Graph Pie Chart</tt>' displays a pie chart showing the distribution of
+grades in the class.
+</p>
+
+<p>
+The <tt>Help</tt> menu contains commands for displaying information about the
+Grade Manager and Browser. '<tt>Help About</tt>' shows users the current version
+of the application.
+</p><p>
+</p>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr width="80%" size="3">
+<center>
+<font size="-1">
+<font color="black"> Prev: </font>[none]
+ | <font color="black"> Next: </font><a href="file-functions.html">file-functions</a>
+ | <font color="black"> Up: </font><a href="functional.html">functional</a>
+ | <font color="black"> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width="80%" size="3">
+
+
+</body></html>
