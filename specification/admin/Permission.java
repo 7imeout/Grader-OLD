@@ -7,6 +7,7 @@ public enum Permission
 {
     /* Permissions added by Michael Murphy */
     ACCESS_ASSIGNMENT_CATEGORY,
+    ACCESS_ASSIGNMENT,
     /* Permissions Added Previously */
     ACCESS_COURSE_NAME,
     ACCESS_COURSE_SNAPSHOT,

@@ -181,10 +181,16 @@ public abstract class AbstractCourse implements Course
 
     /**
      * Accessor fot the <code>Assignment</code>s for this <code>Course</code>.
-     * @return <code>StudentRecord</code> for this <code>Course</code>.
+     * @return all <code>Assignment</code>s from every <code>AssignmentCategory</code> contained in this <code>Course</code>.
      *
      *                                                                     <pre>
-     * pre: (assignmentCategories != null && assignmentCategories.size() > 0)
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     assignmentCategories != null &&
+     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT)
+     * post:
+     *
      */
     public abstract Collection<Assignment> getAssignments();
 
@@ -193,8 +199,7 @@ public abstract class AbstractCourse implements Course
      * for this <code>Course</code>.
      *                                                                     <pre>
      * pre:
-     *
-`     *    session != null &&
+     *     session != null &&
      *     session.currentUser != null &&
      *     assignmentCategories != null &&
      *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_CATEGORY)
