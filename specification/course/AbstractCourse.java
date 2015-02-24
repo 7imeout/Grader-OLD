@@ -78,9 +78,10 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     session != null &&
-    *     session.currentUser != null &&
-    *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_COURSE_NAME)
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_COURSE_NAME)
     * post:
     *     name' == name
     */
@@ -94,7 +95,8 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.UPDATE_COURSE_NAME)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.UPDATE_COURSE_NAME)
     * post:
     *    name' == n
     */
@@ -108,7 +110,8 @@ public abstract class AbstractCourse implements Course {
     * pre: session != null &&
     *    session.currentUser != null &&
     *    gradeSchema != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_COURSE_GRADE_SCHEMA)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_COURSE_GRADE_SCHEMA)
     * post:
     *    (gradeSchema' == gradeSchema)
     */
@@ -122,7 +125,8 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.UPDATE_COURSE_GRADE_SCHEMA)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *        Permission.UPDATE_COURSE_GRADE_SCHEMA)
     * post:
     *    gradeSchema' == g
     */
@@ -134,10 +138,11 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     session != null &&
-    *     session.currentUser != null &&
-    *     latePolicy != null &&
-    *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_COURSE_LATE_POLICY)
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    latePolicy != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_COURSE_LATE_POLICY)
     * post:
     *     latePolicy' == latePolicy)
     */
@@ -149,9 +154,10 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     session != null &&
-    *     session.currentUser != null &&
-    *     roleManager.getPerms(session.currentUser).contains(Permission.UPDATE_COURSE_LATE_POLICY)
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.UPDATE_COURSE_LATE_POLICY)
     * post:
     *     latePolicy' == l
     */
@@ -187,12 +193,13 @@ public abstract class AbstractCourse implements Course {
      * <code>AssignmentCategory</code> contained in this <code>Course</code>.
      * <pre>
      * pre:
-     *     session != null &&
-     *     session.currentUser != null &&
-     *     assignmentCategories != null &&
-     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT)
+     *    session != null &&
+     *    session.currentUser != null &&
+     *    assignmentCategories != null &&
+     *    roleManager.getPerms(session.currentUser).contains(
+     *       Permission.ACCESS_ASSIGNMENT)
      * post:
-     *
+     *    // none yet
      */
     public abstract Collection<Assignment> getAssignments();
 
@@ -201,22 +208,21 @@ public abstract class AbstractCourse implements Course {
      * for this <code>Course</code>.
      * <pre>
      * pre:
-     *     session != null &&
-     *     session.currentUser != null &&
-     *     assignmentCategories != null &&
-     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_CATEGORY)
+     *    session != null &&
+     *    session.currentUser != null &&
+     *    assignmentCategories != null &&
+     *    roleManager.getPerms(session.currentUser).contains(
+     *       Permission.ACCESS_ASSIGNMENT_CATEGORY)
      * post:
-     *     assignmentCategories' == assignmentCategories
+     *    assignmentCategories' == assignmentCategories
      * @return <code>StudentRecord</code> for this <code>Course</code>.
      */
     public abstract Collection<AssignmentCategory>  getAssignmentCategories();
 
    /**
     * Accessor for the <code>AssignmentSubmission</code>s for this course.
-    * @param assignment
-    * @return
-    * <pre>
-    * TODO
+    * @param assignment <code>Assignment</code> to get submissions from.
+    * @returns submissions for the specified <code>Assignment</code>.
     */
    public abstract Collection<AssignmentSubmission> getAssignmentSubmissions(
          Assignment assignment);
@@ -227,15 +233,16 @@ public abstract class AbstractCourse implements Course {
     * @param assignment assignment associated with the submission to get.
     * @param student    student who submitted the submission.
     * @return <code>AssignmentSubmission</code>
-    * for the specified assignment and the student.
+    *         for the specified assignment and the student.
     */
    public abstract AssignmentSubmission getAssignmentSubmission(
          Assignment assignment, User student);
 
     /**
-     *
-     * @param assignment
-     * @return All grades for the given assignment
+     * Accessor for all <code>AssignmentGrade</code>s for the specified
+     * <code>Assignment</code>.
+     * @param assignment assignment to access grades for.
+     * @return All grades for the given assignment.
      */
     public abstract Collection<AssignmentGrade> getAssignmentGrades(
         Assignment assignment);
@@ -247,14 +254,14 @@ public abstract class AbstractCourse implements Course {
      * @return The grade received on the given assignment by the given user
      * <pre>
      * pre:
-     *     session != null &&
-     *     session.currentUser != null &&
-     *     (roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_GRADE) ||
-     *     (session.currentUser.equals(student) &&
-     *      roleManager.getRoles(session.currentUser).contains(Role.STUDENT))
+     *    session != null &&
+     *    session.currentUser != null &&
+     *    (roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_GRADE) ||
+     *    (session.currentUser.equals(student) &&
+     *       roleManager.getRoles(session.currentUser).contains(Role.STUDENT))
      *
      * post:
-     *
+     *    // none yet
      */
     public abstract AssignmentGrade getAssignmentGrade(
         Assignment assignment, User student);
@@ -264,23 +271,24 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     session != null &&
-    *     session.currentUser != null &&
-    *     roleManager.getPerms(session.currentUser).contains(Permission.CREATE_COURSE_SNAPSHOT)
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.CREATE_COURSE_SNAPSHOT)
     * post:
-    *     roleManage.equals(snapShot.roleManager) &&
-    *     gradeSchema.equals(snapShot.gradeSchema) &&
-    *     latePolicy.equals(snapShot.latePolicy) &&
-    *     name.equals(snapShot.name) &&
-    *     studentRecords.equals(snapShot.studentRecords) &&
-    *     assignmentCategories.equals(snapShot.assignmentCategories) &&
+    *    roleManage.equals(snapShot.roleManager) &&
+    *    gradeSchema.equals(snapShot.gradeSchema) &&
+    *    latePolicy.equals(snapShot.latePolicy) &&
+    *    name.equals(snapShot.name) &&
+    *    studentRecords.equals(snapShot.studentRecords) &&
+    *    assignmentCategories.equals(snapShot.assignmentCategories) &&
     *
-    *     roleManage'.equals(snapShot.roleManager) &&
-    *     gradeSchema'.equals(snapShot.gradeSchema) &&
-    *     latePolicy'.equals(snapShot.latePolicy) &&
-    *     name'.equals(snapShot.name) &&
-    *     studentRecords'.equals(snapShot.studentRecords) &&
-    *     assignmentCategories'.equals(snapShot.assignmentCategories)
+    *    roleManage'.equals(snapShot.roleManager) &&
+    *    gradeSchema'.equals(snapShot.gradeSchema) &&
+    *    latePolicy'.equals(snapShot.latePolicy) &&
+    *    name'.equals(snapShot.name) &&
+    *    studentRecords'.equals(snapShot.studentRecords) &&
+    *    assignmentCategories'.equals(snapShot.assignmentCategories)
     */
    public abstract void createSnapshot();
 
@@ -293,7 +301,8 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_COURSE_SNAPSHOT)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_COURSE_SNAPSHOT)
     * post:
     *    snapShot == snapShot'
     */
@@ -308,7 +317,8 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.ADD_STUDENT)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ADD_STUDENT)
     * post:
     *    studentRecords.size() == studentRecords'.size() - 1 &&
     *    exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
@@ -325,7 +335,8 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.REMOVE_STUDENT)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.REMOVE_STUDENT)
     * post:
     *    studentRecords.size() == studentRecords'.size() + 1 &&
     *    !exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
