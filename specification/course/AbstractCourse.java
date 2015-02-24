@@ -19,9 +19,9 @@ import java.util.Collection;
  * paired with a catalog Description of the course. There is also a GradeSchema
  * and LatePolicy associated with each course, both set by the professor.
  *                                                                           <p>
- * CommandTarget is implemented by Course to perform commands on a course spreadsheet,
- * and GraderData is implemented so that a user may add, modify, or remove grade data
- * to a spreadsheet.
+ * CommandTarget is implemented by Course to perform commands on a course
+ * spreadsheet, and GraderData is implemented so that a user may add, modify,
+ * or remove grade data to a spreadsheet.
  */
 public abstract class AbstractCourse implements Course
 {
@@ -88,7 +88,6 @@ public abstract class AbstractCourse implements Course
      * Sets the name of this <code>Course</code>.
      * @param n desired name of this <code>Course</code>.
      *
-     *
      *                                                                     <pre>
      * pre:
      *  session != null &&
@@ -102,7 +101,6 @@ public abstract class AbstractCourse implements Course
     /**
      * Accessor fot the <code>GradeSchema</code> for this <code>Course</code>.
      * @return <code>GradeSchema</code> for this <code>Course</code>.
-     *
      *
      *                                                                     <pre>
      * pre: session != null &&
@@ -211,27 +209,31 @@ public abstract class AbstractCourse implements Course
         Assignment assignment);
 
     /**
-     *
-     * @param assignment
-     * @param student
-     * @return
+     * Accessor for the <code>AssignmentSubmission</code> of the given
+     * <code>User</code> and <code>Assignment</code>.
+     * @param assignment assignment associated with the submission to get.
+     * @param student student who submitted the submission.
+     * @return <code>AssignmentSubmission</code>
+     *               for the specified assignment and the student.
      */
     public abstract AssignmentSubmission getAssignmentSubmission(
         Assignment assignment, User student);
 
     /**
-     *
-     * @param assignment
-     * @return
+     * Accessor for all the <code>AssignmentGrade</code>s.
+     * @param assignment <code>Assignment</code> to get the grades from.
+     * @return all grades for the specified <code>Assignment</code>.
      */
     public abstract Collection<AssignmentGrade> getAssignmentGrades(
         Assignment assignment);
 
     /**
-     *
-     * @param assignment
-     * @param student
-     * @return
+     * Accessor for the <code>AssignmentGrade</code> for the specified
+     * <code>User</code> and <code>Assignment</code>.
+     * @param assignment assignment associated with the submission to get.
+     * @param student student who submitted the assignment.
+     * @return <code>AssignmentGrade</code>
+     *         for the specified assignment and the student.
      */
     public abstract AssignmentGrade getAssignmentGrade(
         Assignment assignment, User student);
