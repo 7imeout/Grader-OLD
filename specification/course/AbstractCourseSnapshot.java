@@ -1,9 +1,5 @@
 package course;
 
-import user.student.StudentRecord;
-
-import java.util.Collection;
-
 /**
  * A read only version of the course for students.
  */

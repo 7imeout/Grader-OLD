@@ -5,7 +5,7 @@ import assignment.Assignment;
 import assignment.AssignmentCategory;
 import assignment.AssignmentGrade;
 import assignment.AssignmentSubmission;
-import user.student.StudentRecord;
+import user.student.AbstractStudentRecord;
 import util.GraderObject;
 
 import java.util.Collection;
@@ -19,8 +19,8 @@ public interface CourseAccessor extends GraderObject {
    GradeSchema getGradeSchema();
    LatePolicy getLatePolicy();
 
-   Collection<StudentRecord> getStudentRecords();
-   StudentRecord getStudentRecord(User student);
+   Collection<AbstractStudentRecord> getAbstractStudentRecords();
+   AbstractStudentRecord getStudentRecord(User student);
 
    Collection<Assignment> getAssignments();
    Collection<AssignmentCategory>  getAssignmentCategories();

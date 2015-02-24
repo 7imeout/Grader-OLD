@@ -10,7 +10,7 @@ import java.util.Collection;
 /**
  * Class containing all of the information for a student's record.
  */
-public class StudentRecord implements GraderObject
+public abstract class AbstractStudentRecord implements GraderObject
 {
    /**
     * Student's position in roster.
@@ -41,4 +41,20 @@ public class StudentRecord implements GraderObject
     * Letter grade of the student.
     */
    LetterGrade letterGrade;
+
+   public abstract AssignmentGrade getStudentAssignmentGrade();
+
+   public abstract Collection<AssignmentGrade> getAllStudentAasignmentGrades();
+
+   public abstract User getStudentUserInfo();
+
+   public abstract String getStudentComment();
+
+   public abstract void setStudentComment();
+
+   public abstract double getStudentRawPercentageGrade();
+
+   public abstract LetterGrade getStudentLetterGrade();
+
+
 }
