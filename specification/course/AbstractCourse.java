@@ -1,6 +1,7 @@
 package course;
 
 import admin.RoleManager;
+import admin.Role;
 import admin.Session;
 import admin.User;
 import assignment.Assignment;
@@ -195,30 +196,35 @@ public abstract class AbstractCourse implements Course {
     */
    public abstract AbstractStudentRecord getStudentRecord(User student);
 
-   /**
-    * Accessor fot the <code>Assignment</code>s for this <code>Course</code>.
-    *
-    * @return <code>StudentRecord</code> for this <code>Course</code>.
-    * <p/>
-    * <pre>
-    * pre: (assignmentCategories != null && assignmentCategories.size() > 0)
-    */
-   public abstract Collection<Assignment> getAssignments();
+    /**
+     * Accessor fot the <code>Assignment</code>s for this <code>Course</code>.
+     * @return all <code>Assignment</code>s from every <code>AssignmentCategory</code> contained in this <code>Course</code>.
+     *
+     *                                                                     <pre>
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     assignmentCategories != null &&
+     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT)
+     * post:
+     *
+     */
+    public abstract Collection<Assignment> getAssignments();
 
-   /**
-    * Accessor fot the <code>AssignmentCategory</code>'s
-    * for this <code>Course</code>.
-    *
-    * <p/>
-    * <pre>
-    * pre:
-    *     assignmentCategories != null
-    * post:
-    *     assignmentCategories' == assignmentCategories
-    *
-    * @return <code>StudentRecord</code> for this <code>Course</code>.
-    */
-   public abstract Collection<AssignmentCategory> getAssignmentCategories();
+    /**
+     * Accessor fot the <code>AssignmentCategory</code>'s
+     * for this <code>Course</code>.
+     *                                                                     <pre>
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     assignmentCategories != null &&
+     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_CATEGORY)
+     * post:
+     *     assignmentCategories' == assignmentCategories
+     * @return <code>StudentRecord</code> for this <code>Course</code>.
+     */
+    public abstract Collection<AssignmentCategory>  getAssignmentCategories();
 
    /**
     * Accessor for the <code>AssignmentSubmission</code>s for this course.
@@ -243,26 +249,33 @@ public abstract class AbstractCourse implements Course {
    public abstract AssignmentSubmission getAssignmentSubmission(
          Assignment assignment, User student);
 
-   /**
-    * Accessor for all the <code>AssignmentGrade</code>s.
-    *
-    * @param assignment <code>Assignment</code> to get the grades from.
-    * @return all grades for the specified <code>Assignment</code>.
-    */
-   public abstract Collection<AssignmentGrade> getAssignmentGrades(
-         Assignment assignment);
+    /**
+     *
+     * @param assignment
+     * @return All grades for the given assignment
+     */
+    public abstract Collection<AssignmentGrade> getAssignmentGrades(
+        Assignment assignment);
 
-   /**
-    * Accessor for the <code>AssignmentGrade</code> for the specified
-    * <code>User</code> and <code>Assignment</code>.
-    *
-    * @param assignment assignment associated with the submission to get.
-    * @param student    student who submitted the assignment.
-    * @return <code>AssignmentGrade</code>
-    * for the specified assignment and the student.
-    */
-   public abstract AssignmentGrade getAssignmentGrade(
-         Assignment assignment, User student);
+    /**
+     * Gets the grade the student earned on an assignment
+     *
+     * @param assignment The assignment that you like to access the grade for
+     * @param student The student user to access a grade for
+     * @return The grade received on the given assignment by the given user
+     *
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     (roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_GRADE) ||
+     *     (session.currentUser.equals(student) &&
+     *      roleManager.getRoles(session.currentUser).contains(Role.STUDENT))
+     *
+     * post:
+     *
+     */
+    public abstract AssignmentGrade getAssignmentGrade(
+        Assignment assignment, User student);
 
    /**
     * Creates a <code>Snapshot</code> of the course.
