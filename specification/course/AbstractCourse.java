@@ -193,7 +193,11 @@ public abstract class AbstractCourse implements Course
      * for this <code>Course</code>.
      *                                                                     <pre>
      * pre:
-     *     assignmentCategories != null
+     *
+`     *    session != null &&
+     *     session.currentUser != null &&
+     *     assignmentCategories != null &&
+     *     roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_CATEGORY)
      * post:
      *     assignmentCategories' == assignmentCategories
      * @return <code>StudentRecord</code> for this <code>Course</code>.

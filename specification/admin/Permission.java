@@ -6,7 +6,7 @@ package admin;
 public enum Permission
 {
     /* Permissions added by Michael Murphy */
-
+    ACCESS_ASSIGNMENT_CATEGORY,
     /* Permissions Added Previously */
     ACCESS_COURSE_NAME,
     ACCESS_COURSE_SNAPSHOT,
