@@ -1,7 +1,6 @@
 package course;
 
 import admin.RoleManager;
-import admin.Role;
 import admin.Session;
 import admin.User;
 import assignment.Assignment;
@@ -32,7 +31,7 @@ public abstract class AbstractCourse implements Course {
    public RoleManager roleManager;
 
    /**
-    *
+    * Current session.
     */
    public Session current;
 
@@ -61,7 +60,7 @@ public abstract class AbstractCourse implements Course {
    /**
     * Data model for the grade book spreadsheet.
     */
-   public Collection<AbstractStudentRecord> abstractStudentRecords;
+   public Collection<AbstractStudentRecord> studentRecords;
 
    /**
     * All assignment categories in a course.
@@ -75,9 +74,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Accessor for the name of this <code>Course</code>.
-    *
     * @return name of this <code>Course</code>.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -91,9 +88,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Sets the name of this <code>Course</code>.
-    *
     * @param n desired name of this <code>Course</code>.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -107,9 +102,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Accessor fot the <code>GradeSchema</code> for this <code>Course</code>.
-    *
     * @return <code>GradeSchema</code> for this <code>Course</code>.
-    *
     * <p/>
     * <pre>
     * pre: session != null &&
@@ -123,9 +116,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Sets the <code>GradeSchema</code> for this <code>Course</code>.
-    *
     * @param g desired <code>GradeSchema</code>.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -139,9 +130,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Accessor fot the <code>LatePolicy</code> for this <code>Course</code>.
-    *
     * @return <code>LatePolicy</code> for this <code>Course</code>.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -156,9 +145,7 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Sets the <code>LatePolicy</code> for this <code>Course</code>.
-    *
     * @param l desired <code>LatePolicy</code>.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -172,7 +159,6 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Accessor fot the <code>StudentRecord</code>s for this <code>Course</code>.
-    *
     * @return <code>StudentRecord</code>s for this <code>Course</code>.
     * <p/>
     * <pre>
@@ -181,11 +167,10 @@ public abstract class AbstractCourse implements Course {
     * post:
     *     studentRecords' == studentRecord
     */
-   public abstract Collection<AbstractStudentRecord> getAbstractStudentRecords();
+   public abstract Collection<AbstractStudentRecord> getStudentRecords();
 
    /**
     * Accessor fot the <code>StudentRecord</code> for this <code>Course</code>.
-    *
     * @return <code>StudentRecord</code> for this <code>Course</code>.
     * <p/>
     * <pre>
@@ -198,9 +183,9 @@ public abstract class AbstractCourse implements Course {
 
     /**
      * Accessor fot the <code>Assignment</code>s for this <code>Course</code>.
-     * @return all <code>Assignment</code>s from every <code>AssignmentCategory</code> contained in this <code>Course</code>.
-     *
-     *                                                                     <pre>
+     * @return all <code>Assignment</code>s from every
+     * <code>AssignmentCategory</code> contained in this <code>Course</code>.
+     * <pre>
      * pre:
      *     session != null &&
      *     session.currentUser != null &&
@@ -214,7 +199,7 @@ public abstract class AbstractCourse implements Course {
     /**
      * Accessor fot the <code>AssignmentCategory</code>'s
      * for this <code>Course</code>.
-     *                                                                     <pre>
+     * <pre>
      * pre:
      *     session != null &&
      *     session.currentUser != null &&
@@ -228,11 +213,10 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Accessor for the <code>AssignmentSubmission</code>s for this course.
-    *
     * @param assignment
     * @return
-    *
     * <pre>
+    * TODO
     */
    public abstract Collection<AssignmentSubmission> getAssignmentSubmissions(
          Assignment assignment);
@@ -240,7 +224,6 @@ public abstract class AbstractCourse implements Course {
    /**
     * Accessor for the <code>AssignmentSubmission</code> of the given
     * <code>User</code> and <code>Assignment</code>.
-    *
     * @param assignment assignment associated with the submission to get.
     * @param student    student who submitted the submission.
     * @return <code>AssignmentSubmission</code>
@@ -259,11 +242,10 @@ public abstract class AbstractCourse implements Course {
 
     /**
      * Gets the grade the student earned on an assignment
-     *
      * @param assignment The assignment that you like to access the grade for
      * @param student The student user to access a grade for
      * @return The grade received on the given assignment by the given user
-     *
+     * <pre>
      * pre:
      *     session != null &&
      *     session.currentUser != null &&
@@ -279,7 +261,6 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Creates a <code>Snapshot</code> of the course.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -305,10 +286,8 @@ public abstract class AbstractCourse implements Course {
 
    /**
     * Gets the current <code>AbstractCourseSnapshot</code>.
-    *
     * @return a snapshot for the current course
     *         or null if no snapshot was created.
-    *
     * <p/>
     * <pre>
     * pre:
@@ -319,4 +298,38 @@ public abstract class AbstractCourse implements Course {
     *    snapShot == snapShot'
     */
    public abstract AbstractCourseSnapshot getSnapshot();
+
+   /**
+    * Adds a student to the student record this <code>AbstractCourse</code>
+    * holds.
+    * @param student student <code>User</code> to add to this course.
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(Permission.ADD_STUDENT)
+    * post:
+    *    studentRecords.size() == studentRecords'.size() - 1 &&
+    *    exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
+    */
+   public abstract void addStudent(User student);
+
+   /**
+    * Removes a student from the student record this <code>AbstractCourse</code>
+    * holds.
+    * @param student student <code>User</code> to remove from this course.
+    * @return
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(Permission.REMOVE_STUDENT)
+    * post:
+    *    studentRecords.size() == studentRecords'.size() + 1 &&
+    *    !exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
+    */
+   public abstract boolean removeStudent(User student);
+
 }

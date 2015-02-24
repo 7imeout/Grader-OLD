@@ -19,7 +19,7 @@ public interface CourseAccessor extends GraderObject {
    GradeSchema getGradeSchema();
    LatePolicy getLatePolicy();
 
-   Collection<AbstractStudentRecord> getAbstractStudentRecords();
+   Collection<AbstractStudentRecord> getStudentRecords();
    AbstractStudentRecord getStudentRecord(User student);
 
    Collection<Assignment> getAssignments();
