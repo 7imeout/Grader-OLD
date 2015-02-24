@@ -1,6 +1,7 @@
 package course;
 
 import admin.RoleManager;
+import admin.Role;
 import admin.Session;
 import admin.User;
 import assignment.Assignment;
@@ -231,16 +232,27 @@ public abstract class AbstractCourse implements Course
     /**
      *
      * @param assignment
-     * @return
+     * @return All grades for the given assignment
      */
     public abstract Collection<AssignmentGrade> getAssignmentGrades(
         Assignment assignment);
 
     /**
+     * Gets the grade the student earned on an assignment
      *
-     * @param assignment
-     * @param student
-     * @return
+     * @param assignment The assignment that you like to access the grade for
+     * @param student The student user to access a grade for
+     * @return The grade received on the given assignment by the given user
+     *
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     (roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_GRADE) ||
+     *     (session.currentUser.equals(student) &&
+     *      roleManager.getRoles(session.currentUser).contains(Role.STUDENT))
+     *
+     * post:
+     *
      */
     public abstract AssignmentGrade getAssignmentGrade(
         Assignment assignment, User student);
