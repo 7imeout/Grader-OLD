@@ -4,6 +4,9 @@
     <option name="PER_PROJECT_SETTINGS">
       <value>
         <option name="RIGHT_MARGIN" value="80" />
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="JAVA">
           <indentOptions>
             <option name="INDENT_SIZE" value="3" />
