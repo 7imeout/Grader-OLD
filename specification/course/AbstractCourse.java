@@ -170,7 +170,13 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     studentRecords != null
+    *    session != null &&
+    *    studentRecords != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_STUDENT_GRADE) &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_STUDENT_PERSONAL_DATA)
     * post:
     *     studentRecords' == studentRecord
     */
@@ -182,9 +188,15 @@ public abstract class AbstractCourse implements Course {
     * <p/>
     * <pre>
     * pre:
-    *     studentRecords != null && studentRecords.size() > 0
+    *    session != null && session.currentUser != null
+    *    studentRecords != null && (studentRecords.size() > 0) &&
+    *    student.equals(session.currentUser) ||
+    *    (roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_STUDENT_GRADE) &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_STUDENT_PERSONAL_DATA))
     * post:
-    *     studentRecord' == studentRecord
+    *    studentRecord' == studentRecord
     */
    public abstract StudentRecord getStudentRecord(User student);
 
@@ -346,15 +358,31 @@ public abstract class AbstractCourse implements Course {
    public abstract void addAssignmentCategory(
       AssignmentCategory assignmentCategory);
 
+   /**
+    *
+    * @param assignmentCategory
+    */
    public abstract void updateAssignmentCategory(
       AssignmentCategory assignmentCategory);
 
+   /**
+    *
+    * @param submission
+    */
    public abstract void addAssignmentSubmission(
       AssignmentSubmission submission);
 
+   /**
+    *
+    * @param submission
+    */
    public abstract void updateAssignmentSubmission(
       AssignmentSubmission submission);
 
+   /**
+    *
+    * @param assignmentGrade
+    */
    public abstract void updateAssignmentGrade(
       AssignmentGrade assignmentGrade);
 

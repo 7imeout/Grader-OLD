@@ -86,7 +86,10 @@ public abstract class RoleManager {
     * Accessor for the <code>Permissions</code>s a given <code>User</code> has.
     * @param u the <code>User</code> to find <code>Permissions</code>s for.
     * @return all <code>Permissions</code>s the given <code>User</code> has.
-    *
+    * <p/>
+    * <pre>
+    * pre:
+    *    // none
     * post:
     *    if (getRoles(u).contains(Role.INSTRUCTOR))
     *    forall(Permission p; return.contains(p))
@@ -100,4 +103,12 @@ public abstract class RoleManager {
     * @param perm
     */
    abstract void grantRolePerm(Role role, Permission perm);
+
+   /**
+    * TODO
+    *
+    * @param role
+    * @param perm
+    */
+   abstract void revokeRolePerm(Role role, Permission perm);
 }
