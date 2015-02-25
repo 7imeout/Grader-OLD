@@ -305,9 +305,6 @@ public abstract class AbstractCourse implements Course
      */
     public abstract AbstractCourseSnapshot getSnapshot();
 
-    void setName(String name);
-    void setGradeSchema(GradeSchema gradeSchema);
-    void setLatePolicy(LatePolicy latePolicy);
     /**
      * Adds an assignment to the course
      *
