@@ -438,7 +438,7 @@ public abstract class AbstractCourse implements Course {
     *       Permission.REMOVE_COURSE_USER)
     * post:
     *    !return ||
-    *    (nonStudentUsers.size() == nonStudentUsers'.size() + 1 &&
+    *    (nonStudentUsers.size() - 1 == nonStudentUsers'.size() &&
     *    !nonStudentUsers.contains(user))
     */
    public abstract boolean removeNonStudentUser(User user);
