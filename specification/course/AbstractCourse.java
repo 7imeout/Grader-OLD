@@ -347,6 +347,7 @@ public abstract class AbstractCourse implements Course {
    /**
     * Adds an assignment category to the course
     * @param assignmentCategory The assignment category to add to this course
+    * <p/>
     * <pre>
     * pre:
     *    session != null &&
@@ -354,34 +355,35 @@ public abstract class AbstractCourse implements Course {
     *    roleManager.getPerms(session.currentUser).contains(
     *       Permission.ADD_ASSIGNMENT_CATEGORY)
     * post:
+    *    // none
     */
    public abstract void addAssignmentCategory(
       AssignmentCategory assignmentCategory);
 
    /**
-    *
-    * @param assignmentCategory
+    * Updates the <code>AssignmentCategory</code> as the given one.
+    * @param assignmentCategory new <code>AssignmentCategory</code>.
     */
    public abstract void updateAssignmentCategory(
       AssignmentCategory assignmentCategory);
 
    /**
-    *
-    * @param submission
+    * Adds the given <code>AssignmentSubmission</code>.
+    * @param submission <code>AssignmentSubmission</code> to add.
     */
    public abstract void addAssignmentSubmission(
       AssignmentSubmission submission);
 
    /**
-    *
-    * @param submission
+    * Updates the <code>AssignmentSubmission</code> as the given one.
+    * @param submission new <code>AssignmentSubmission</code>.
     */
    public abstract void updateAssignmentSubmission(
       AssignmentSubmission submission);
 
    /**
-    *
-    * @param assignmentGrade
+    * Updates the <code>AssignmentGrade</code> as the given one.
+    * @param assignmentGrade new <code>AssignmentGrade</code>.
     */
    public abstract void updateAssignmentGrade(
       AssignmentGrade assignmentGrade);
@@ -436,6 +438,17 @@ public abstract class AbstractCourse implements Course {
     *    !exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
     */
    public abstract boolean removeStudent(User student);
+
+   /**
+    * Updates the student roster.
+    * <p/>
+    * <pre>
+    * pre:
+    *    // none yet
+    * post:
+    *    // none yet
+    */
+   public abstract void updateStudentRoster();
 
    /**
     * Adds a non-student <code>User</code> to this course.
