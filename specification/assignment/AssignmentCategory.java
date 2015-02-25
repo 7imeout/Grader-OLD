@@ -9,7 +9,21 @@ import java.util.Collection;
  * a collection of Assignments that are a part of AsignemntCategory.
  */
 public abstract class AssignmentCategory implements GraderObject {
+
+   /**
+    * Parent <code>AssignmentCategory</code> of this
+    * <code>AssignmentCategory</code>.
+    */
    AssignmentCategory parent;
+
+   /**
+    * Sub-<code>AssignmentCategory</code>'s of this
+    * <code>AssignmentCategory</code>.
+    */
    Collection<AssignmentCategory> subcategories;
+
+   /**
+    * Assignments that fall under this category.
+    */
    Collection<Assignment> assignments;
 }
