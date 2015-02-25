@@ -319,6 +319,19 @@ public abstract class AbstractCourse implements Course
      */
     void addAssignment(Assignment assignment);
     void updateAssignment(Assignment assignment);
+
+   /**
+    * Adds an assignment category to the course
+    *
+    * @param assignmentCategory The assignment category to add to this course
+    *                   <pre>
+    * pre:
+    *     session != null &&
+    *     session.currentUser != null &&
+    *     roleManager.getPerms(session.currentUser).contains(Permission.ADD_ASSIGNMENT_CATEGORY)
+    * post:
+    *
+    */
     void addAssignmentCategory(AssignmentCategory assignmentCategory);
     void updateAssignmentCategory(AssignmentCategory assignmentCategory);
     void addAssignmentSubmission(AssignmentSubmission submission);
