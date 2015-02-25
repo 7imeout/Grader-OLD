@@ -10,11 +10,8 @@ import java.util.Collection;
 public abstract class User implements GraderObject {
 
    String id;
-
    Collection<Identity> identities;
-
    String firstName;
-
    String lastName;
 
    abstract String getId();
