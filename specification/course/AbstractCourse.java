@@ -390,7 +390,7 @@ public abstract class AbstractCourse implements Course {
     * Removes a student from the student record this <code>AbstractCourse</code>
     * holds.
     * @param student student <code>User</code> to remove from this course.
-    * @return <p/>
+    * @return <code>true</code> if successful, <code>false</code> otherwise.
     * <pre>
     * pre:
     *    session != null &&
@@ -404,23 +404,23 @@ public abstract class AbstractCourse implements Course {
    public abstract boolean removeStudent(User student);
 
    /**
-    *
-    * @param user
+    * Adds a non-student <code>User</code> to this course.
+    * @param user non-student <code>User</code>.
     */
    public abstract void addNonStudentUser(User user);
 
    /**
-    *
-    * @param user
-    * @return
+    * Removes a non-student, registered <code>User</code> from this course.
+    * @param user registered non-student <code>User</code>.
+    * @return <code>true</code> if successful, <code>false</code> otherwise.
     */
    public abstract boolean removeNonStudentUser(User user);
 
    /**
-    *
-    * @param user
-    * @return
+    * Accessor for all non-student, registered
+    * <code>User</code>s in this course.
+    * @return all non-student, registered <code>User</code>s.
     */
-   public abstract Collection<User> getNonStudentUsers(User user);
+   public abstract Collection<User> getNonStudentUsers();
 
 }
