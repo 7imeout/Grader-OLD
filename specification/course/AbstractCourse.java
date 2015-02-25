@@ -55,11 +55,6 @@ public abstract class AbstractCourse implements Course {
    public CourseAccessor snapShot;
 
    /**
-    * Registered users in this class who are NOT students.
-    */
-   public Collection<User> nonStudentUsers;
-
-   /**
     * Data model for the grade book spreadsheet.
     */
    public Collection<StudentRecord> studentRecords;
@@ -442,55 +437,5 @@ public abstract class AbstractCourse implements Course {
     * Updates the student roster.
     */
    public abstract void updateStudentRoster();
-
-   /**
-    * Adds a non-student <code>User</code> to this course.
-    * @param user non-student <code>User</code>.
-    * <p/>
-    * <pre>
-    * pre:
-    *    session != null &&
-    *    session.currentUser != null &&
-    *    nonStudentUsers != null &&
-    *    roleManager.getPerms(session.currentUser).contains(
-    *       Permission.ADD_COURSE_USER)
-    * post:
-    *    nonStudentUsers.size() == nonStudentUsers'.size() - 1 &&
-    *    nonStudentUsers.contains(user)
-    */
-   public abstract void addNonStudentUser(User user);
-
-   /**
-    * Removes a non-student, registered <code>User</code> from this course.
-    * @param user registered non-student <code>User</code>.
-    * @return <code>true</code> if successful, <code>false</code> otherwise.
-    * pre:
-    *    session != null &&
-    *    session.currentUser != null &&
-    *    nonStudentUsers != null &&
-    *    roleManager.getPerms(session.currentUser).contains(
-    *       Permission.REMOVE_COURSE_USER)
-    * post:
-    *    !return ||
-    *    (nonStudentUsers.size() - 1 == nonStudentUsers'.size() &&
-    *    !nonStudentUsers.contains(user))
-    */
-   public abstract boolean removeNonStudentUser(User user);
-
-   /**
-    * Accessor for all non-student, registered
-    * <code>User</code>s in this course.
-    * @return all non-student, registered <code>User</code>s.
-    * pre:
-    *    session != null &&
-    *    session.currentUser != null &&
-    *    nonStudentUsers != null &&
-    *    roleManager.getPerms(session.currentUser).contains(
-    *       Permission.ACCESS_USER_PERSONAL_DATA)
-    * post:
-    *    nonStudentUsers' == nonStudentUsers &&
-    *    nonStudentUsers'.equals(nonStudentUses)
-    */
-   public abstract Collection<User> getNonStudentUsers();
 
 }

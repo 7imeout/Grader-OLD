@@ -37,48 +37,43 @@ public abstract class RoleManager {
 
 
    /**
-    * TODO
-    *
-    * @param role
-    * @param user
+    * Assigns a <code>Role</code> to a <code>User</code>.
+    * @param role <code>Role</code> to assign.
+    * @param user <code>User</code> to assign to.
     */
    abstract void assign(Role role, User user);
 
    /**
-    * TODO
-    *
-    * @param role
-    * @param user
+    * Revokes a <code>Role</code> from a <code>User</code>.
+    * @param role <code>Role</code> to revoke.
+    * @param user <code>User</code> to revoke from.
     */
    abstract void revoke(Role role, User user);
 
    /**
-    * TODO
-    *
-    * @return
+    * Accessor for <code>User</code>-<code>Role</code> assignments.
+    * @return all <code>User</code>-<code>Role</code> assignments.
     */
    abstract Collection<UserRoleAssignment> getUserRoleAssignments();
 
    /**
-    * TODO
-    *
-    * @return
+    * Accessor for all <code>User</code>s enrolled in a course.
+    * @return all <code>User</code>s enrolled in a course.
     */
    abstract Collection<User> getAllUsers();
 
    /**
-    * TODO
-    *
-    * @param role
-    * @return
+    * Returns all <code>User</code>s with the specified <code>Role</code>.
+    * @param role <code>Role</code> to use as a key to
+    *             look for <code>User</code>s.
+    * @return all <code>User</code>s with the specified <code>Role</code>.
     */
    abstract Collection<User> getUsers(Role role);
 
    /**
-    * TODO
-    *
-    * @param user
-    * @return
+    * Returns all <code>Role</code>s that a given <code>User</code> has.
+    * @param user <code>User</code> to get <code>Roles</code> from.
+    * @return all <code>Role</code>s that the <code>User</code> has.
     */
    abstract Collection<Role> getRoles(User user);
 
