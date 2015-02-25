@@ -227,10 +227,20 @@ public abstract class AbstractCourse implements Course {
    public abstract Collection<AssignmentCategory> getAssignmentCategories();
 
    /**
-    * Accessor for the <code>AssignmentSubmission</code>s for this course.
-    * @param assignment
-    * @return
+    * Accessor for the <code>AssignmentSubmission</code>s for the given
+    * <code>Assignment</code>.
+    * @param assignment <code>Assignment</code> that the submissions are under.
+    * @return submissions submitted under the <code>Assignment</code>.
+    * <p/>
     * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    assignment != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_ASSIGNMENT_SUBMISSION)
+    * post:
+    *    // none
     */
    public abstract Collection<AssignmentSubmission> getAssignmentSubmissions(
          Assignment assignment);
@@ -243,12 +253,15 @@ public abstract class AbstractCourse implements Course {
     * @return <code>AssignmentSubmission</code>
     * for the specified assignment and the student.
     * <p/>
+    * <pre>
     * pre:
     *    session != null &&
     *    session.currentUser != null &&
-    *    roleManager.getPerms(session.currentUser).contains(
-    *    Permission.ACCESS_ASSIGNMENT_SUBMISSION)
+    *    (session.currentUser.equals(student) ||
+    *       roleManager.getPerms(session.currentUser).contains(
+    *          Permission.ACCESS_ASSIGNMENT_SUBMISSION))
     * post:
+    *    // none
     */
    public abstract AssignmentSubmission getAssignmentSubmission(
          Assignment assignment, User student);
@@ -263,6 +276,8 @@ public abstract class AbstractCourse implements Course {
     *    session.currentUser != null &&
     *    (roleManager.getPerms(session.currentUser).contains(
     *       Permission.ACCESS_ASSIGNMENT_GRADE)
+    * post:
+    *    // none
     */
    public abstract Collection<AssignmentGrade> getAssignmentGrades(
          Assignment assignment);
@@ -357,6 +372,15 @@ public abstract class AbstractCourse implements Course {
    /**
     * Updates the <code>AssignmentCategory</code> as the given one.
     * @param assignmentCategory new <code>AssignmentCategory</code>.
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.UPDATE_ASSIGNMENT_CATEGORY)
+    * post:
+    *    // none
     */
    public abstract void updateAssignmentCategory(
       AssignmentCategory assignmentCategory);
@@ -364,6 +388,17 @@ public abstract class AbstractCourse implements Course {
    /**
     * Adds the given <code>AssignmentSubmission</code>.
     * @param submission <code>AssignmentSubmission</code> to add.
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    (session.currentUser.equals(submission.student) &&
+    *    roleManager.getRoles(session.currentUser).contains(Role.STUDENT)) ||
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ADD_ASSIGNMENT_SUBMISSION))
+    * post:
+    *    // none
     */
    public abstract void addAssignmentSubmission(
       AssignmentSubmission submission);
