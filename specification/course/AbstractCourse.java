@@ -19,9 +19,9 @@ import java.util.Collection;
  * paired with a catalog Description of the course. There is also a GradeSchema
  * and LatePolicy associated with each course, both set by the professor.
  * <p/>
- * CommandTarget is implemented by Course to perform commands on a course spreadsheet,
- * and GraderData is implemented so that a user may add, modify, or remove grade data
- * to a spreadsheet.
+ * CommandTarget is implemented by Course to perform commands on a course
+ * spreadsheet, and GraderData is implemented so that a user may add, modify,
+ * or remove grade data to a spreadsheet.
  */
 public abstract class AbstractCourse implements Course {
    /**
@@ -207,7 +207,8 @@ public abstract class AbstractCourse implements Course {
     *    session != null &&
     *    session.currentUser != null &&
     *    assignmentCategories != null &&
-    *    roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_CATEGORY)
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.ACCESS_ASSIGNMENT_CATEGORY)
     * post:
     *    assignmentCategories' == assignmentCategories
     * @return <code>StudentRecord</code> for this <code>Course</code>.
@@ -337,15 +338,20 @@ public abstract class AbstractCourse implements Course {
     *       Permission.ADD_ASSIGNMENT_CATEGORY)
     * post:
     */
-   public abstract void addAssignmentCategory(AssignmentCategory assignmentCategory);
+   public abstract void addAssignmentCategory(
+      AssignmentCategory assignmentCategory);
 
-   public abstract void updateAssignmentCategory(AssignmentCategory assignmentCategory);
+   public abstract void updateAssignmentCategory(
+      AssignmentCategory assignmentCategory);
 
-   public abstract void addAssignmentSubmission(AssignmentSubmission submission);
+   public abstract void addAssignmentSubmission(
+      AssignmentSubmission submission);
 
-   public abstract void updateAssignmentSubmission(AssignmentSubmission submission);
+   public abstract void updateAssignmentSubmission(
+      AssignmentSubmission submission);
 
-   public abstract void updateAssignmentGrade(AssignmentGrade assignmentGrade);
+   public abstract void updateAssignmentGrade(
+      AssignmentGrade assignmentGrade);
 
    /**
     * Gets the current <code>AbstractCourseSnapshot</code>.
@@ -396,5 +402,25 @@ public abstract class AbstractCourse implements Course {
     *    !exists (AbstractStudentRecord rec; rec.getStudentUserInfo(student))
     */
    public abstract boolean removeStudent(User student);
+
+   /**
+    *
+    * @param user
+    */
+   public abstract void addNonStudentUser(User user);
+
+   /**
+    *
+    * @param user
+    * @return
+    */
+   public abstract boolean removeNonStudentUser(User user);
+
+   /**
+    *
+    * @param user
+    * @return
+    */
+   public abstract Collection<User> getNonStudentUsers(User user);
 
 }
