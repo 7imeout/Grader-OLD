@@ -2,7 +2,7 @@ package user.student.command;
 
 import command.ReadCommand;
 import course.CourseAccessor;
-import user.student.AbstractStudentRecord;
+import user.student.StudentRecord;
 
 /**
  * AccessStudentGrade implements ReadCommand to read a raw score or letter
@@ -10,5 +10,5 @@ import user.student.AbstractStudentRecord;
  *                                                                           <p>
  */
 
-public abstract class AccessStudentGrade implements ReadCommand<AbstractStudentRecord, CourseAccessor> {
+public abstract class AccessStudentGrade implements ReadCommand<StudentRecord, CourseAccessor> {
 }

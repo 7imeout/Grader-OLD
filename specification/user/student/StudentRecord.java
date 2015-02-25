@@ -12,7 +12,7 @@ import java.util.Collection;
 /**
  * Class containing all of the information for a student's record.
  */
-public abstract class AbstractStudentRecord implements GraderObject {
+public abstract class StudentRecord implements GraderObject {
    /**
     * Student's user information
     */

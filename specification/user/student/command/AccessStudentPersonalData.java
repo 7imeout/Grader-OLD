@@ -2,11 +2,11 @@ package user.student.command;
 
 import command.ReadCommand;
 import course.CourseAccessor;
-import user.student.AbstractStudentRecord;
+import user.student.StudentRecord;
 
 /**
  * Gets personal data about a student.
  *
  */
-public abstract class AccessStudentPersonalData implements ReadCommand<AbstractStudentRecord, CourseAccessor> {
+public abstract class AccessStudentPersonalData implements ReadCommand<StudentRecord, CourseAccessor> {
 }
