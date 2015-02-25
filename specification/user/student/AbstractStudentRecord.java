@@ -1,6 +1,8 @@
 package user.student;
 
+import assignment.Assignment;
 import assignment.AssignmentGrade;
+import course.CurveSetting;
 import course.LetterGrade;
 import admin.User;
 import util.GraderObject;
@@ -10,13 +12,7 @@ import java.util.Collection;
 /**
  * Class containing all of the information for a student's record.
  */
-public abstract class AbstractStudentRecord implements GraderObject
-{
-   /**
-    * Student's position in roster.
-    */
-   int rosterPosition;
-
+public abstract class AbstractStudentRecord implements GraderObject {
    /**
     * Student's user information
     */
@@ -42,19 +38,98 @@ public abstract class AbstractStudentRecord implements GraderObject
     */
    LetterGrade letterGrade;
 
-   public abstract AssignmentGrade getStudentAssignmentGrade();
+   /**
+    * Accessor for the student's grade on the specified <code>Assignment</code>.
+    * @return grade the student received for the <code>Assignment</code>.
+    * <p/>
+    * <pre>
+    * pre:
+    *    grades != null &&
+    *    exists (int i; i >= 0 && i < grades.size();
+    *       grades.get(i).getAssignment().equals(assignment))
+    * post:
+    *    grades.contains(return) &&
+    *    grades'.size() == grades.size()
+    */
+   public abstract AssignmentGrade getAssignmentGrade(Assignment assignment);
 
-   public abstract Collection<AssignmentGrade> getAllStudentAasignmentGrades();
+   /**
+    * Accessor for the entire <code>Collection</code> of
+    * <code>AssignmentGrade</code>s for the student.
+    * @return all <code>AssignmentGrades</code>s of this student.
+    * <p/>
+    * <pre>
+    * pre:
+    *    grades != null;
+    * post:
+    *    forall (AssignmentGrade ag; grades.contains(ag)
+    */
+   public abstract Collection<AssignmentGrade> getAllSAasignmentGrades();
 
-   public abstract User getStudentUserInfo();
+   /**
+    * Accessor for the personal <code>User</code> information of the student.
+    * @return <code>User</code> information of the student.
+    * <p/>
+    * <pre>
+    * pre:
+    *    student != null
+    * post:
+    *    return.equals(student)
+    */
+   public abstract User getUserInfo();
 
+   /**
+    * Accessor for the comment written by the instructor about the student.
+    * @return comment written by the instructor.
+    * <p/>
+    * <pre>
+    * pre:
+    *    student != null
+    * post:
+    *    // none
+    */
    public abstract String getStudentComment();
 
-   public abstract void setStudentComment();
+   /**
+    * Sets the comment for the student.
+    * @param studentComment comment for the student.
+    * <p/>
+    * <pre>
+    * pre:
+    *    user != null &&
+    *    studentComment != null
+    * post:
+    *    comment' != null &&
+    *    comment'.equals(studentComment)
+    */
+   public abstract void setStudentComment(String studentComment);
 
-   public abstract double getStudentRawPercentageGrade();
+   /**
+    * Calculates and returns the raw percentage grade of the student.
+    * @return raw percentage grade.
+    * <p/>
+    * <pre>
+    * pre:
+    *    user != null
+    * post:
+    *    // none
+    */
+   public abstract double getRawPercentageGrade();
 
-   public abstract LetterGrade getStudentLetterGrade();
+   /**
+    * Calculates and returns the letter grade of the student.
+    * @param curve <code>CurveSetting</code> of the course a student is in.
+    * @return letter grade.
+    * <p/>
+    * <pre>
+    * pre:
+    *    curve != null &&
+    *    user != null &&
+    *    getRawPercentageGrade() >= 0
+    * post:
+    *    // none
+    */
+   public abstract LetterGrade getLetterGrade(CurveSetting curve);
 
 
 }
