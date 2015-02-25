@@ -64,7 +64,7 @@ public abstract class StudentRecord implements GraderObject {
     * post:
     *    forall (AssignmentGrade ag; grades.contains(ag)
     */
-   public abstract Collection<AssignmentGrade> getAllSAasignmentGrades();
+   public abstract Collection<AssignmentGrade> getAllassignmentGrades();
 
    /**
     * Accessor for the personal <code>User</code> information of the student.
