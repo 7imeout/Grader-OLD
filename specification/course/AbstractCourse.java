@@ -304,4 +304,15 @@ public abstract class AbstractCourse implements Course
      * @return  a snapshot for the current course or null if no snapshot was created.
      */
     public abstract AbstractCourseSnapshot getSnapshot();
+
+    void setName(String name);
+    void setGradeSchema(GradeSchema gradeSchema);
+    void setLatePolicy(LatePolicy latePolicy);
+    void addAssignment(Assignment assignment);
+    void updateAssignment(Assignment assignment);
+    void addAssignmentCategory(AssignmentCategory assignmentCategory);
+    void updateAssignmentCategory(AssignmentCategory assignmentCategory);
+    void addAssignmentSubmission(AssignmentSubmission submission);
+    void updateAssignmentSubmission(AssignmentSubmission submission);
+    void  updateAssignmentGrade(AssignmentGrade assignmentGrade);
 }
