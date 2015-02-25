@@ -184,11 +184,11 @@ public abstract class AbstractCourse implements Course {
     * pre:
     *    session != null && session.currentUser != null &&
     *    studentRecords != null && (studentRecords.size() > 0) &&
-    *    student.equals(session.currentUser) ||
-    *    (roleManager.getPerms(session.currentUser).contains(
-    *       Permission.ACCESS_STUDENT_GRADE) &&
-    *    roleManager.getPerms(session.currentUser).contains(
-    *       Permission.ACCESS_STUDENT_PERSONAL_DATA))
+    *    (student.equals(session.currentUser) ||
+    *       (roleManager.getPerms(session.currentUser).contains(
+    *          Permission.ACCESS_STUDENT_GRADE) &&
+    *       roleManager.getPerms(session.currentUser).contains(
+    *          Permission.ACCESS_STUDENT_PERSONAL_DATA)))
     * post:
     *    studentRecord' == studentRecord
     */
