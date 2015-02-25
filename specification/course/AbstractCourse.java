@@ -406,6 +406,23 @@ public abstract class AbstractCourse implements Course {
    /**
     * Updates the <code>AssignmentSubmission</code> as the given one.
     * @param submission new <code>AssignmentSubmission</code>.
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    (session.currentUser.equals(submission.student) &&
+    *    if (forall (Role role; roleManager.getRoles(
+    *        session.currentUser).contains(role); role == Role.STUDENT))
+    *       submission.student != null &&
+    *       submission.student.equals(session.currentUser) &&
+    *       roleManager.getPerms(session.currentUser).contains(
+    *          Permission.UPDATE_ASSIGNMENT_SUBMISSION))
+    *    else
+    *       roleManager.getPerms(session.currentUser).contains(
+    *          Permission.UPDATE_ASSIGNMENT_SUBMISSION))
+    * post:
+    *    // none
     */
    public abstract void updateAssignmentSubmission(
       AssignmentSubmission submission);
@@ -413,6 +430,15 @@ public abstract class AbstractCourse implements Course {
    /**
     * Updates the <code>AssignmentGrade</code> as the given one.
     * @param assignmentGrade new <code>AssignmentGrade</code>.
+    * <p/>
+    * <pre>
+    * pre:
+    *    session != null &&
+    *    session.currentUser != null &&
+    *    roleManager.getPerms(session.currentUser).contains(
+    *       Permission.UPDATE_ASSIGNMENT_GRADE))
+    * post:
+    *    // none
     */
    public abstract void updateAssignmentGrade(
       AssignmentGrade assignmentGrade);
