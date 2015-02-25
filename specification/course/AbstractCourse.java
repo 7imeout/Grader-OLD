@@ -239,6 +239,10 @@ public abstract class AbstractCourse implements Course
      *
      * @param assignment
      * @return All grades for the given assignment
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     (roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNMENT_GRADE)
      */
     public abstract Collection<AssignmentGrade> getAssignmentGrades(
         Assignment assignment);
