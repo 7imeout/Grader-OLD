@@ -225,6 +225,12 @@ public abstract class AbstractCourse implements Course
      * @param assignment
      * @param student
      * @return
+     *
+     * pre:
+     *   session != null &&
+     *   session.currentUser != null &&
+     *   roleManager.getPerms(session.currentUser).contains(Permission.ACCESS_ASSIGNEMENT_SUBMISSION)
+     * post:
      */
     public abstract AssignmentSubmission getAssignmentSubmission(
         Assignment assignment, User student);
