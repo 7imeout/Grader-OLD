@@ -92,18 +92,16 @@ public abstract class RoleManager {
    abstract Collection<Permission> getPerms(User u);
 
    /**
-    * TODO
-    *
-    * @param role
-    * @param perm
+    * Grants a <code>Permission</code> to the given <code>Role</code>.
+    * @param role <code>Role</code> to grant <code>Permission</code> to.
+    * @param perm <code>Permission</code> to grant.
     */
    abstract void grantRolePerm(Role role, Permission perm);
 
    /**
-    * TODO
-    *
-    * @param role
-    * @param perm
+    * Revokes a <code>Permission</code> from the given <code>Role</code>.
+    * @param role <code>Role</code> to revoke <code>Permission</code> from.
+    * @param perm <code>Permission</code> to revoke.
     */
    abstract void revokeRolePerm(Role role, Permission perm);
 }
