@@ -308,6 +308,18 @@ public abstract class AbstractCourse implements Course
     void setName(String name);
     void setGradeSchema(GradeSchema gradeSchema);
     void setLatePolicy(LatePolicy latePolicy);
+    /**
+     * Adds an assignment to the course
+     *
+     * @param assignment The assignment to add to this course
+     *                   <pre>
+     * pre:
+     *     session != null &&
+     *     session.currentUser != null &&
+     *     roleManager.getPerms(session.currentUser).contains(Permission.ADD_ASSIGNEMENT)
+     * post:
+     *
+     */
     void addAssignment(Assignment assignment);
     void updateAssignment(Assignment assignment);
     void addAssignmentCategory(AssignmentCategory assignmentCategory);
