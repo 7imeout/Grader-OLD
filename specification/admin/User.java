@@ -7,9 +7,15 @@ import java.util.Collection;
 /**
  * An identifiable human granted a Role in the Grader Application.
  */
-public interface User extends GraderObject {
-   String getId();
-   Collection<Identity> getIdentities();
-   String getFirstName();
-   String getLastName();
+public abstract class User implements GraderObject {
+
+   String id;
+   Collection<Identity> identities;
+   String firstName;
+   String lastName;
+
+   abstract String getId();
+   abstract Collection<Identity> getIdentities();
+   abstract String getFirstName();
+   abstract String getLastName();
 }
