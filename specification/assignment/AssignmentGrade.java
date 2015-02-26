@@ -14,4 +14,6 @@ public abstract class AssignmentGrade implements GraderObject {
    Assignment assignment;
    int rawScore;
    LetterGrade letter;
+
+   public abstract Assignment getAssignment();
 }
