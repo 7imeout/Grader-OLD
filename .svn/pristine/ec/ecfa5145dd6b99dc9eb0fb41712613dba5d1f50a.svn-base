@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>
+X Team Governance
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Node Team Governance</strong>
+</font>
+</p>
+
+<br>
+<blockquote>
+<table align=center border=1 cellpadding=4>
+  <tr>
+    <td valign=top><strong>Duty</strong>
+    <td valign=top><strong>Team Member Name</strong>
+    <td valign=top><strong>Unix User ID</strong>
+  <tr>
+    <td valign=top>Team Leader
+    <td valign=top>&nbsp;Matt Bleifer
+    <td valign=top>&nbsp;
+  mbleifer<tr>
+    <td valign=top>Assistant Leader
+    <td valign=top>&nbsp;Grant Campanelli
+    <td valign=top>&nbsp;
+  gcampane<tr>
+    <td valign=top>Technical Leader
+    <td valign=top>&nbsp;Michael Murphy
+    <td valign=top>&nbsp;
+  mmurph18<tr>
+    <td valign=top>Librarian/Secretary
+    <td valign=top>&nbsp;Mike Ryu
+    <td valign=top>&nbsp;
+  doryu<tr>
+    <td valign=top>Documentation Specialist
+    <td valign=top>&nbsp;Grant Plaster
+    <td valign=top>&nbsp;
+  jplaster<tr>
+    <td valign=top>Aesthetic Specialist
+    <td valign=top>&nbsp;Scotty Beauchamp
+    <td valign=top>&nbsp; psbeauch
+</table>
+</blockquote>
+</body>
+</html>
