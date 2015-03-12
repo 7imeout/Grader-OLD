@@ -140,7 +140,7 @@ public abstract class AbstractCourse implements Course {
          roleManager.getPerms(session.currentUser).contains(
             Permission.ACCESS_COURSE_LATE_POLICY)
       post:
-         latePolicy' == latePolicy)
+         (latePolicy' == latePolicy)
     */
    public abstract LatePolicy getLatePolicy();
 
