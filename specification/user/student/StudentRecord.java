@@ -42,14 +42,14 @@ public abstract class StudentRecord implements GraderObject {
     * Accessor for the student's grade on the specified <code>Assignment</code>.
     * @return grade the student received for the <code>Assignment</code>.
     * <p/>
-    * <pre>
-    * pre:
-    *    grades != null &&
-    *    exists (int i; i >= 0 && i < grades.size();
-    *       grades.get(i).getAssignment().equals(assignment))
-    * post:
-    *    grades.contains(return) &&
-    *    grades'.size() == grades.size()
+
+      pre:
+         grades != null &&
+         exists (int i; i >= 0 && i < grades.size();
+            grades.get(i).getAssignment().equals(assignment))
+      post:
+         grades.contains(return) &&
+         grades'.size() == grades.size()
     */
    public abstract AssignmentGrade getAssignmentGrade(Assignment assignment);
 
@@ -58,11 +58,11 @@ public abstract class StudentRecord implements GraderObject {
     * <code>AssignmentGrade</code>s for the student.
     * @return all <code>AssignmentGrades</code>s of this student.
     * <p/>
-    * <pre>
-    * pre:
-    *    grades != null;
-    * post:
-    *    forall (AssignmentGrade ag; grades.contains(ag)
+
+      pre:
+         grades != null;
+      post:
+         forall (AssignmentGrade ag; grades.contains(ag)
     */
    public abstract Collection<AssignmentGrade> getAllAssignmentGrades();
 
@@ -70,11 +70,11 @@ public abstract class StudentRecord implements GraderObject {
     * Accessor for the personal <code>User</code> information of the student.
     * @return <code>User</code> information of the student.
     * <p/>
-    * <pre>
-    * pre:
-    *    student != null
-    * post:
-    *    return.equals(student)
+
+      pre:
+         student != null
+      post:
+         return.equals(student)
     */
    public abstract User getUserInfo();
 
@@ -82,11 +82,11 @@ public abstract class StudentRecord implements GraderObject {
     * Accessor for the comment written by the instructor about the student.
     * @return comment written by the instructor.
     * <p/>
-    * <pre>
-    * pre:
-    *    student != null
-    * post:
-    *    // none
+
+      pre:
+         student != null
+      post:
+         // none
     */
    public abstract String getStudentComment();
 
@@ -94,13 +94,13 @@ public abstract class StudentRecord implements GraderObject {
     * Sets the comment for the student.
     * @param studentComment comment for the student.
     * <p/>
-    * <pre>
-    * pre:
-    *    user != null &&
-    *    studentComment != null
-    * post:
-    *    comment' != null &&
-    *    comment'.equals(studentComment)
+
+      pre:
+         user != null &&
+         studentComment != null
+      post:
+         comment' != null &&
+         comment'.equals(studentComment)
     */
    public abstract void setStudentComment(String studentComment);
 
@@ -108,11 +108,11 @@ public abstract class StudentRecord implements GraderObject {
     * Calculates and returns the raw percentage grade of the student.
     * @return raw percentage grade.
     * <p/>
-    * <pre>
-    * pre:
-    *    user != null
-    * post:
-    *    // none
+    *
+      pre:
+         user != null
+      post:
+         // none
     */
    public abstract double getRawPercentageGrade();
 
@@ -121,13 +121,13 @@ public abstract class StudentRecord implements GraderObject {
     * @param curve <code>CurveSetting</code> of the course a student is in.
     * @return letter grade.
     * <p/>
-    * <pre>
-    * pre:
-    *    curve != null &&
-    *    user != null &&
-    *    getRawPercentageGrade() >= 0
-    * post:
-    *    // none
+    *
+      pre:
+         curve != null &&
+         user != null &&
+         getRawPercentageGrade() >= 0
+      post:
+         // none
     */
    public abstract LetterGrade getLetterGrade(CurveSetting curve);
 
