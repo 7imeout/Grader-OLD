@@ -2,96 +2,186 @@
 <html>
 <head>
 <title>
-2.4.  Graphics Functions
+2.6.  Graphics Functions
 </title>
 </head>
 <body bgcolor = white>
 <a name="Graphics Functions">
 <h3>
-2.4.  Graphics Functions
+2.6.  Graphics Functions
 </h3>
 </a>
 <p>
 Scenarios in this section illustrate functions available to the system
 administrator.  These functions allow an administrator to change the grade curve distribution graphically, using both a histogram and a pie chart.
 
-<a name="histogram">
+<a name="Histogram">
 <h4>
-2.4.1.  Histogram
+2.6.1.  Histogram
 </h4>
 </a>
 <p>
-When the user selects the `<tt>Histogram ...</tt>' item in the
-`<tt>Graphics</tt>' menu, the system responds with the dialog shown in the following figure.
+In order to display the histogram for grade curve manipulation the user selects the '<tt>Histogram ...</tt>' menu item in the '<tt>Graph</tt>' menu, as seen in Figure 1.
+</p>
 
 <br>
+<hr>
+<a name="Opening the histogram dialog">
+<p align=center>
+<img src="images/menu-neither-checked.png" width="1000">
+</p>
+<p align=center> Figure 1: Opening the histogram dialog.</p>
+<hr>
+</a>
+<br>
+
+After the user selects the '<tt>Histogram ...</tt>' menu item, the dialog in Figure 2 is shown and the '<tt>Graph</tt>' menu is automatically collapsed.
+<br>
+
 <br>
 <hr>
 <a name="Histogram dialog">
 <p align=center>
-<img src="images/Histogram1.png">
+<img src="images/histogram.png" width="1000">
 </p>
-<p align=center> Histogram dialog.  </p>
+<p align=center> Figure 2: Histogram dialog.</p>
 <hr>
 </a>
 <br>
 
-<em>The user is able to adjust the grade curve distribution by sliding the bar on the right.
-Next to the grade is shown the number of students that are within the category for that grade as well as the percentage.</em>
+On the right hand side of the histogram, the numbers next to the letter grades denote the number of students within the range of that grade.
 
-<a name="curve">
+<a name="Pie Chart">
 <h4>
-2.4.2.  Adjusting the grade curve distribution
+2.6.2.  Pie Chart
 </h4>
 </a>
 <p>
-When a user adjusts the curve by sliding the letter grades on the right side of the dialog, the numbers next to the grade will auto-update accordingly
- as seen in the following figure. </p>
+In order to display the histogram for grade curve manipulation the user selects the '<tt>Pie Chart ...</tt>' menu item in the '<tt>Graph</tt>' menu, as seen in Figure 3.
+</p>
 
 <br>
-<br>
 <hr>
-<a name="Histogram dialog 2">
+<a name="Opening the pie chart dialog">
 <p align=center>
-<img src="images/Histogram2.png">
+<img src="images/menu-neither-checked-2.png" width="1000">
 </p>
-<p align=center> Adjusting the grade curve distribution.  </p>
+<p align=center> Figure 3: Opening the pie chart dialog.</p>
 <hr>
 </a>
 <br>
 
-<a name="pie">
-<h4>
-2.4.3.  Pie chart dialog
-</h4>
-</a>
-<p>
-<em>The following figure shows how a user can also adjust the grade curve distribution by adjusting the handles on the pie chart. Just like the
- histogram, the numbers will auto-update accordingly.</em>
-
+After the user selects the '<tt>Pie Chart ...</tt>' menu item, the dialog in Figure 4 is shown and the '<tt>Graph</tt>' menu is automatically collapsed.
 <br>
+
 <br>
 <hr>
 <a name="Pie chart dialog">
 <p align=center>
-<img src="images/Pie_Chart.png">
+<img src="images/pie-chart.png" width="1000">
 </p>
-<p align=center> Pie chart dialog.  </p>
+<p align=center> Figure 4: Pie chart dialog.</p>
 <hr>
 </a>
 <br>
 
+The percentages shown next to the letter grades within each section of the pie chart denote the percent of students within the range of that grade.
+
+<p>
+In order to open both the histogram and pie chart in one dialog, the user checks both the '<tt>Histogram ...</tt>' and '<tt>Pie Chart ...</tt>' menu items in the '<tt>Graph</tt>' menu. In Figure 5, the pie chart dialog is currently open and so the user selects the '<tt>Histogram ...</tt>' menu item in order to display both graphs in a single dialog.
+</P> 
+
+<br>
+<hr>
+<a name="Opening the histogram and pie chart dialog">
+<p align=center>
+<img src="images/menu-pie-checked.png" width="1000">
+</p>
+<p align=center> Figure 5: Opening both the histogram and pie chart in one dialog.</p>
+<hr>
+</a>
+<br>
+
+The graphs that are currently displayed are denoted with a check mark. The user toggles a graph off by once again clicking the corresponding menu item.
+<p>
+Figure 6 shows the dialog containing both the histogram and pie chart.
 
 <br>
 <br>
+<hr>
+<a name="Histogram and pie chart dialog">
+<p align=center>
+<img src="images/hist-pie-full.png" width="1000">
+</p>
+<p align=center> Figure 6: Histogram and pie chart dialog.</p>
+<hr>
+</a>
+
+<a name="Gradecurve">
+<h4>
+2.6.3.  Adjusting the Grade Curve
+</h4>
+</a>
+<p>
+Figure 7 shows the current grade curve before any adjustment has taken place.
+</p>
+
 <br>
+<hr>
+<a name="Histogram and pie chart dialog">
+<p align=center>
+<img src="images/hist-pie-full.png" width="1000">
+</p>
+<p align=center> Figure 7: Histogram and pie chart dialog before adjusting the grade curve.</p>
+<hr>
+</a>
+<br>
+
+In order to adjust the grade curve via the histogram, the user drags the letter grade buttons seen on the right hand side of the histogram either up or down.
+<p>
+In order to adjust the grade curve via the pie chart, the user drags the circular buttons on the outside of the pie chart either clockwise or counter-clockwise.
+<p>
+If both graphs are open, when the user adjusts one graph, the other graph will automatically adjust as well.
+<p>
+Figure 8 shows the graphs after the user moves the minimum B grade up to match the minimum A grade. This makes it so that no students receive a B grade in the course.
+<br>
+
+<br>
+<hr>
+<a name="Histogram and pie chart dialog post adjustment">
+<p align=center>
+<img src="images/hist-pie-collapsed.png" width="1000">
+</p>
+<p align=center> Figure 8: Histogram and pie chart dialog after adjusting the grade curve.</p>
+<hr>
+</a>
+<br>
+
+Because the B button is now even with the A button, if the user moves the B button on the histogram upwards, both the A and B buttons move upwards. However, if the user moves the B button downwards, the B section is once again exposed and only the B button will move.
+<p>
+Likewise, if the user moves the B button on the pie chart counter-clockwise, the A section continues to get smaller, while the C section gets bigger. However, if the user moves the B button clockwise, the B section becomes exposed and gets bigger as the C section gets smaller.
+<p>
+Any changes made to the grade curve are automatically saved when those changes are made.
+<p>
+Figure 9 shows the updated gradebook based on the new grade curve set by the user.
+
+<br>
+<hr>
+<a name="Updated curve">
+<p align=center>
+<img src="images/main-updated-curve.png" width="1000">
+</p>
+<p align=center> Figure 9: New gradebook based on the new grade curve.</p>
+<hr>
+</a>
+
 <br>
 <hr width=80% size=3>
 <center>
 <font size=-1>
-<font color=black> Prev: </font><a href="edit-functions.html">edit-functions</a>
- | <font color=black> Next: </font><a href="admin-functions.html">admin-function</a>
- | <font color=black> Up: </font><a href="functional.html">functional</a>
+<font color=black> Prev: </font><a href="filtering.html">filtering</a>
+ | <font color=black> Next: </font><a href="under-construction.html">under-construction</a>
+ | <font color=black> Up: </font>[None]
  | <font color=black> Top: </font><a href="index.html">index</a></font>
 </center>
 <hr width=80% size=3>
