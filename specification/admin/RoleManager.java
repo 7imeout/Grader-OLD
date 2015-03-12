@@ -82,12 +82,12 @@ public abstract class RoleManager {
     * @param u the <code>User</code> to find <code>Permissions</code>s for.
     * @return all <code>Permissions</code>s the given <code>User</code> has.
     * <p/>
-    * <pre>
-    * pre:
-    *    // none
-    * post:
-    *    if (getRoles(u).contains(Role.INSTRUCTOR))
-    *    forall(Permission p; return.contains(p))
+
+      pre:
+         // none
+      post:
+         if (getRoles(u).contains(Role.INSTRUCTOR))
+            forall(Permission p; return.contains(p))
     */
    abstract Collection<Permission> getPerms(User u);
 
