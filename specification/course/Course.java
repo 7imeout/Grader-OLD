@@ -1,12 +1,11 @@
 package course;
 
-import command.CommandTarget;
 import util.GraderObject;
 
 /**
  * Holds all the methods associated with a course.
  */
-public interface Course extends CourseAccessor, CourseModifier, CommandTarget {
+public interface Course extends CourseAccessor, CourseModifier {
     /**
      * Accessor for the course snapshot.
      * @return <code>CourseSnapshot</code>.

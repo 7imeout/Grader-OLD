@@ -2,24 +2,18 @@ package admin;
 
 import java.util.Collection;
 
-public abstract class AbstractUser implements User
+public abstract class AbstractUser extends User
 {
 
     @Override
-    public String getId();
+    public abstract String getId();
 
     @Override
-    public Collection<Identity> getIdentities();
+    public abstract Collection<Identity> getIdentities();
 
     @Override
-    public String getFirstName()
-    {
-        return null;
-    }
+    public abstract String getFirstName();
 
     @Override
-    public String getLastName()
-    {
-        return null;
-    }
+    public abstract String getLastName();
 }
