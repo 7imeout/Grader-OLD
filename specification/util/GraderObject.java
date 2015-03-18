@@ -1,7 +1,7 @@
 package util;
 
 /**
- * Object that a Command can operate on.
+ * Top level Object for the grader program.
  */
 public interface GraderObject {
 

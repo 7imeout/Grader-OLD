@@ -1,6 +1,5 @@
 package coursemanager;
 
-import command.CommandTarget;
 import course.Course;
 import util.GraderObject;
 
@@ -13,7 +12,7 @@ import java.util.Collection;
  *                                                                           <p>
  */
 
-public interface CourseManager extends CommandTarget<CourseManager>, GraderObject {
+public interface CourseManager extends  GraderObject {
    interface CourseEntries extends GraderObject {
       public Collection<Course> getCourses();
    }

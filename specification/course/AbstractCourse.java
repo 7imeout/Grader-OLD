@@ -7,7 +7,6 @@ import assignment.Assignment;
 import assignment.AssignmentCategory;
 import assignment.AssignmentGrade;
 import assignment.AssignmentSubmission;
-import command.CommandHistory;
 import user.student.StudentRecord;
 
 import java.util.Collection;
@@ -64,10 +63,6 @@ public abstract class AbstractCourse implements Course {
     */
    public Collection<AssignmentCategory> assignmentCategories;
 
-   /**
-    * All commands that have been delivered to this.
-    */
-   public CommandHistory commandHistory;
 
    /**
     * Accessor for the name of this <code>Course</code>.
