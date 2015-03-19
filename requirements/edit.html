@@ -1,0 +1,194 @@
+
+<html>
+<head>
+<title>
+2.9.2  Details of Edit Commands
+</title>
+</head>
+<body bgcolor = white>
+<a name="Details of Edit Commands">
+<h3>
+2.9.2  Details of Edit Commands
+</h3>
+</a>
+
+<a name="undoing">
+<a name="Undo">
+<h4>
+Undo and Redo
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Undo</tt> from the <tt>Edit</tt> menu, the system
+undoes the effect of the most recently confirmed updating command, or the
+effect of a previously executed <tt>Undo</tt> command.  An <em>updating
+command</em> is any Grader Tool command that changes information in the spreadsheet.
+
+For any of these actions, the precise definition of <tt>Undo</tt> is that the
+Grader Tool workspace is restored to the state that existed immediately prior
+to the confirmed execution of the action.  If no confirmed updating command has
+been executed since the Grader Tool was invoked, <tt>Undo</tt> has no effect.
+<p>
+If <tt>Undo</tt> is executed twice in succession, with no intervening confirmed
+update between the two executions, the effect of the first of the two
+<tt>Undo</tt> executions is undone.  That is, the state of the workspace is
+restored to the state that existed immediately prior to the first
+<tt>Undo</tt>.  Third and further successive executions of <tt>Undo</tt>,
+without an intervening updating command, cause the system to toggle between the
+state of the workspace with and without the effect of the most recently
+confirmed update.  This behavior means that only a single level of undo is
+available.  That is, only the single most recently executed updating command
+can be undone.
+<p>
+<tt>Undo</tt> only applies to the updating commands and itself, not to any
+other commands such as Publishing Grades. <tt>Redo</tt> has the same functionality
+and restrictions as <tt>Undo</tt> only it restores the state of the Grader Tool
+workspace to one that existed preceding the confirmed execution of an updating command.
+
+<a name="text editing">
+<a name="Cut, Copy, and Paste">
+<h4>
+Cut, Copy, and Paste
+</h4>
+</a>
+</a>
+<p>
+<a name="clipboard">
+Operating systems typically provide a "clipboard" area through which cut and
+paste editing commands operate.
+</a>
+This clipboard holds values that are cut, copied, and pasted in tools such as
+the Grader.  Hence, the <tt>Grader</tt> <tt>Cut</tt>, <tt>Copy</tt>, and
+<tt>Paste</tt> commands operate through such a clipboard.
+<p>
+To execute the <tt>Cut</tt> or <tt>Copy</tt> command, the user must first
+select a segment of text in a text box or row of student data.  Text selection is performed using
+click and drag with the mouse, or by other environment-specific means such as
+double or triple clicking in a text box.
+<p>
+After text selection, when the user selects the <tt>Cut</tt> command from the
+<tt>Edit</tt> menu, the system removes the selected text from the edit box and
+copies the text into the clipboard.  When the user selects the <tt>Copy</tt>
+command, the selected text is copied to the clipboard, but is not removed from
+the display in which it is selected and the text remains selected.  A
+particular segment of selected text is <em>unselected</em> by selecting another
+text segment or by single-clicking the mouse anywhere in the Grader display.
+Other environment-specific means of unselecting text may be available.
+<p>
+<a name="text cutting restrictions">
+The <tt>Cut</tt> command can only be executed in the context of a display where
+the text boxes are editable, i.e., where the user may type in the text boxes.
+</a>
+In contrast to <tt>Cut</tt>, the <tt>Copy</tt> command can be executed in any
+dialog in which text boxes appear, including read-only text boxes.
+<p>
+To execute the <tt>Paste</tt> command, the user must first execute a
+<tt>Cut</tt> or <tt>Copy</tt> and then place the typing cursor within some
+editable text box.  After these steps, when the user selects the <tt>Paste</tt>
+command from the <tt>Edit</tt> menu, the text stored in the clipboard is
+inserted at the point of the typing cursor, as if it had been entered by the
+user from the keyboard.  Pasted text appears in normal font, i.e., it is not
+highlighted as selected text.
+<p>
+If the user attempts to execute a <tt>Cut</tt> or <tt>Copy</tt> command without
+first selecting text, the commands have no effect.  If the user attempts to
+execute a <tt>Paste</tt> command without having executed either a <tt>Cut</tt>
+or <tt>Copy</tt>, the <tt>Paste</tt> command has no effect.  The <tt>Cut</tt>,
+<tt>Copy</tt>, and <tt>Paste</tt> commands operate only on plain text strings
+within a single displayed text box.
+<p>
+The use of the clipboard for communication between the Grader Tool and the
+outside operating environment depends on the capabilities of the environment.
+Specifically, the environment must support the insertion and removal of plain
+text to and from the clipboard.  If this requirement is met, and the operating
+environment permits inter-tool clipboard communication, then plain text copied
+to the clipboard from a another tool can be pasted in the Grader using
+<tt>Paste</tt>.  Similarly, plain text cut or copied in the Grader Tool can
+be pasted or otherwise accessed as plain text in another tool, via the
+clipboard.
+
+<a name="deleting">
+<a name="Delete">
+<h4>
+Delete
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Delete</tt> from the <tt>Edit</tt> menu, the system
+deletes a field or cell from the spreadsheet.
+
+<a name="finding">
+<a name="Find">
+<h4>
+Find
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Find</tt> from the <tt>Edit</tt> menu, the system
+initiates a standard operating system "Finder" window to search for specific
+strings within the spreadsheet's data.
+<p>
+Matching strings will be highlighted and a count will be displayed, similar to using a
+"Command-F" command on a webpage. The user can toggle through them with arrows next to the
+string matcher, and the finder bar is removed when the user clicks any other part of the
+Grader display.
+<p>
+If the Find command is closed and used again, the previous string pattern that was searched for
+remains, and progress is kept until the user deletes the string from the search bar.
+
+<a name="clearing">
+<a name="Clear">
+<h4>
+Clear
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Clear</tt> from the <tt>Edit</tt> menu, the system
+removes all information from a selected field. When paired with the "Shift" key to
+select multiple items, the user may clear multiple items of data, such as category inputs
+or whole rows of student data.
+<p>
+If nothing is selected and the <tt>Clear</tt> command is selected, there is no effect. On the contrary,
+the user may use "Shift" to select the whole spreadsheet and clear all fields of information with the command.
+
+<a name="filtering">
+<a name="Filter">
+<h4>
+Filter
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Filter</tt> from the <tt>Edit</tt> menu, the system brings
+up a dialog for the user to select which items they want to view in the spreadsheet.
+See <a href="filtering.html">Section 2.5.5</a> for more details and specifics.
+
+<a name="preferences">
+<a name="Preferences">
+<h4>
+Preferences
+</h4>
+</a>
+</a>
+<p>
+Preferences currently has no implementation details.
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="file.html">file</a>
+ | <font color=black> Next: </font><a href="help.html">help</a>
+ | <font color=black> Up: </font><a href="functional.html">functional</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+</body>
+</html>
