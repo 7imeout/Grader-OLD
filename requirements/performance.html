@@ -14,17 +14,26 @@
         </h3>
     </a>
 </a>
-<p>
-    All calendar scheduling, viewing, and options commands must execute
-    instantaneously, except for the following:
+
+<p>Description:
+    <ul>
+    <li>interactive commands that should respond immediately; the term to use for these is "effectively instantaneous", which means the command executes instantaneously from the end user's perspective, disregarding any delays that are beyond the control of the software tool itself
+    <li>computational commands that may take longer to run; give an allowable maximum amount of time
+    <li>maximum size requirements for stored data, in terms of number of data elements, not bytes
+    </ul>
+</p>
+<p>All Grader functionality should execute instantaneously, except for the following:
+
 <ul>
     <li>
-        the time to execute a meeting scheduling operation must be on the order of
-        seconds
+        Synchronizing students with the student server
+    </li>
     <li>
-        the time to execute viewing another user's calendar must be instantaneous,
-        except for any delays due to network transmission of data from the central host
-        to the local computer
+        Logging in should take some extra time
+    </li>
+    <li>
+        Exporting into various file formats
+    </li>
 </ul>
 <p>
     The time to execute all administrative commands must be instantaneous, except
