@@ -33,13 +33,9 @@ public class EditCategoryUI extends JDialog {
         categorySelectPanel.add(categorySelectBox);
         categorySelectPanel.add(Box.createRigidArea(new Dimension(110, 0)));
 
-        
-
         panel.add(categorySelectPanel);
 
         panel.add(Box.createRigidArea(new Dimension(10, 0)));
-
-        //end of combo box
 
 		JPanel catNamePanel = new JPanel();
         catNamePanel.setAlignmentX(Component.CENTER_ALIGNMENT);
