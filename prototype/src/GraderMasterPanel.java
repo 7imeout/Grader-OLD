@@ -89,13 +89,14 @@ public class GraderMasterPanel extends javax.swing.JPanel {
 
        statsTable.setModel(new javax.swing.table.DefaultTableModel(
              new Object[][]{
-                   {null, null, null, null, null},
-                   {null, null, null, null, null},
-                   {null, null, null, null, null},
-                   {null, null, null, null, null}
+                   {"Median", "", 0, 0, "0%", "F"},
+                   {"Mean", "", 0, 0, "0%", "F"},
+                   {"Min", "", 0, 0, "0%", "F"},
+                   {"Max", "", 0, 0, "0%", "F"},
              },
              new String[]{
-                   "Statistics", "", "Category", "%", "Letter"
+                   "Statistics", "", "Project", "Test",
+                   "Percent Grade", " Letter Grade"
             }
         ));
        jScrollPane2.setViewportView(statsTable);
