@@ -14,14 +14,11 @@ public class HelpMenuItems implements MenuItemProvider {
    }
 
    private void createMenuItems() {
-      studentMenuItems.add(aboutMenu());
+      helpMenuItems.add(aboutMenu());
    }
 
    private JMenuItem aboutMenu() {
       JMenuItem mnuAbout = new JMenuItem("About");
-      mnuAbout.setMnemonic('N');
-      mnuAbout.setAccelerator(
-            KeyStroke.getKeyStroke('N', ActionEvent.ALT_MASK));
       mnuAbout.addActionListener(new ActionListener() {
          // Anonymous inner classes are used here for brevity, but should be
          // named classes in production code.
