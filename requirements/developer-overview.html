@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<title>
+4.  Developer Overview
+</title>
+</head>
+<body bgcolor = white>
+<a name="Developer Overview">
+<h2>
+4.  Developer Overview
+</h2>
+</a>
+<p>
+As outlined in the UI Overview,  Node Grader system is comprised of two client applications that have different set of audiences. The first type of client program is designed for the instructors of a course, and supports full array of class management, while the second type of client application is designed for students of those courses to view and analyze their grades and submit assignments. In addition, in order to house the information generated and aggregated from the client applications
+and provide accurate course information to the users, a remote server and database application needs to be established.
+<p>
+In the former client application (instructor view), the major object in the user program is the
+Gradebook.  It's implementation will need to provide efficient access for a wide
+range of operations, including serial navigation, lookup by different parameters such as student name or an ID, and filtered
+searching.  Hence, it will need to use a moderately sophisticated data
+structure that supports these various forms of access.  In our model, the grader application is designed to use multi-directional hash (or vector) to achieve this.
+<p>In addition to the Gradebook, Node Grader contains other major objects such as Statistics view and Trend Graphs view. These &quot;views&quot; provide an easy way for the clients to view analytic information on the data entered in the Gradebook. These views are compounded real-time from the data entered, and updates as the client updates the Gradebook. Thus, there is only one underlying data model for the all &quot;views&quot; of Node Grader, and no data storage redundancy occurs.
+<p>
+In the latter client application, the major objects are identical as the former, because the &quot;views&quot; of the underlying data does not differ much. However, the latter client does not support any modification of the Gradebook data. Instead, the client supports temporary &quot;view&quot; modification of the &quot;snapshots&quot; of the greadebook, so that the students using this client are able to use the Gradebook as a dynamic grade-predictor. In addition, this client application masks all information on Gradebook except the one of student accessing the gradebook, to protect other students' privacy.
+<p>
+Separating these two application's functionalities while having them share as much of interface components as possible shall be executed with care, as there is a risk present that may compromise confidential academic and personal information. Also, in order to properly establish client-server (or database) connection, developers need
+knowledge of client/server design and implementation.  Functionality to support
+client/server architectures is available in many modern libraries.  It will
+make sense for the developers to choose an implementation language in which
+client/server support is available, dependable, and well documented.
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="non-functional-requirements.html">non-functional-requirements</a>
+ | <font color=black> Next: </font><a href="formal-spec.html">formal-spec</a>
+ | <font color=black> Up: </font><a href="index.html">index</a>
+ | <font color=black> Top: </font><a href="index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+</body>
+</html>
