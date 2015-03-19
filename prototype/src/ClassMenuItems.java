@@ -124,4 +124,8 @@ public class ClassMenuItems implements MenuItemProvider {
     public ArrayList<JMenuItem> getMenuItems(){
         return classMenuItems;
     }
+
+   public ArrayList<JMenuItem> getContextMenuItems() {
+      return new ArrayList<JMenuItem>();
+   }
 }

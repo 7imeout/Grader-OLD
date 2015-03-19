@@ -2,14 +2,21 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
 import java.util.ArrayList;
 
 public class AssignmentMenuItems implements MenuItemProvider {
 
    private ArrayList<JMenuItem> assignmentMenuItems;
 
+   private ArrayList<JMenuItem> categoryContextMenuItems;
+   private ArrayList<JMenuItem> assignmentContextMenuItems;
+
    public AssignmentMenuItems() {
       assignmentMenuItems = new ArrayList<JMenuItem>();
+
+      categoryContextMenuItems = new ArrayList<JMenuItem>();
+      assignmentContextMenuItems = new ArrayList<JMenuItem>();
       createMenuItems();
    }
 
@@ -19,6 +26,12 @@ public class AssignmentMenuItems implements MenuItemProvider {
       assignmentMenuItems.add(addDeleteAssignmentCatMenu());
       assignmentMenuItems.add(addEditAssignmentCatMenu());
       assignmentMenuItems.add(addSubmitAssignmentMenu());
+
+      categoryContextMenuItems.add(addEditAssignmentCatMenu());
+      categoryContextMenuItems.add(addDeleteAssignmentCatMenu());
+
+      assignmentContextMenuItems.add(addEditAssignmentMenu());
+      assignmentContextMenuItems.add(addDeleteAssignmentMenu());
    }
 
    private JMenuItem addNewAssignmentMenu() {
@@ -55,11 +68,46 @@ public class AssignmentMenuItems implements MenuItemProvider {
       return mnuNewAssignmentCat;
    }
 
+   private JMenuItem addDeleteAssignmentMenu() {
+      JMenuItem mnuDeleteAssCat = new JMenuItem("Delete Assignment");
+      mnuDeleteAssCat.setMnemonic('D');
+      mnuDeleteAssCat.setAccelerator(
+            KeyStroke.getKeyStroke('D', ActionEvent.ALT_MASK));
+      mnuDeleteAssCat.addActionListener(new ActionListener() {
+         // Anonymous inner classes are used here for brevity, but should be
+         // named classes in production code.
+         public void actionPerformed(ActionEvent e) {
+            ///add code here to pull up accroding menu
+
+         }
+      });
+
+      return mnuDeleteAssCat;
+   }
+
+   private JMenuItem addEditAssignmentMenu() {
+      JMenuItem mnuEditAssCat = new JMenuItem("Edit Assignment ...");
+      mnuEditAssCat.setMnemonic('K');
+      mnuEditAssCat.setAccelerator(
+            KeyStroke.getKeyStroke('K', ActionEvent.ALT_MASK));
+      mnuEditAssCat.addActionListener(new ActionListener() {
+         // Anonymous inner classes are used here for brevity, but should be
+         // named classes in production code.
+         public void actionPerformed(ActionEvent e) {
+            ///add code here to pull up accroding menu
+
+         }
+      });
+
+      return mnuEditAssCat;
+   }
+
    private JMenuItem addDeleteAssignmentCatMenu() {
       JMenuItem mnuDeleteAssCat = new JMenuItem("Delete Selected Category");
       mnuDeleteAssCat.setMnemonic('D');
       mnuDeleteAssCat.setAccelerator(
-            KeyStroke.getKeyStroke('D', ActionEvent.ALT_MASK));
+            KeyStroke.getKeyStroke('D', InputEvent.ALT_MASK +
+                  InputEvent.CTRL_MASK));
       mnuDeleteAssCat.addActionListener(new ActionListener() {
          // Anonymous inner classes are used here for brevity, but should be
          // named classes in production code.
@@ -76,7 +124,8 @@ public class AssignmentMenuItems implements MenuItemProvider {
       JMenuItem mnuEditAssCat = new JMenuItem("Edit Category ...");
       mnuEditAssCat.setMnemonic('K');
       mnuEditAssCat.setAccelerator(
-            KeyStroke.getKeyStroke('K', ActionEvent.ALT_MASK));
+            KeyStroke.getKeyStroke('K', InputEvent.ALT_MASK +
+                  InputEvent.CTRL_MASK));
       mnuEditAssCat.addActionListener(new ActionListener() {
          // Anonymous inner classes are used here for brevity, but should be
          // named classes in production code.
@@ -109,5 +158,13 @@ public class AssignmentMenuItems implements MenuItemProvider {
 
    public ArrayList<JMenuItem> getMenuItems() {
       return assignmentMenuItems;
+   }
+
+   public ArrayList<JMenuItem> getCategoryContextMenuItems() {
+      return categoryContextMenuItems;
+   }
+
+   public ArrayList<JMenuItem> getContextMenuItems() {
+      return assignmentContextMenuItems;
    }
 }

@@ -55,4 +55,8 @@ public class GraphMenuItems implements MenuItemProvider {
    public ArrayList<JMenuItem> getMenuItems() {
       return graphMenuItems;
    }
+
+   public ArrayList<JMenuItem> getContextMenuItems() {
+      return new ArrayList<JMenuItem>();
+   }
 }
