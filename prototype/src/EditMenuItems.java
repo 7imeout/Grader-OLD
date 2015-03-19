@@ -191,6 +191,7 @@ public class EditMenuItems implements  MenuItemProvider {
             public void actionPerformed(ActionEvent e)
             {
                 //add code here to pull up accroding menu
+                FilterUI.showFilterUI();
             }
         });
 
