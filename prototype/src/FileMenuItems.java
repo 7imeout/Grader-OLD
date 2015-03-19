@@ -60,7 +60,7 @@ public class FileMenuItems implements MenuItemProvider {
          // Anonymous inner classes are used here for brevity, but should be
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
-            //add code here to pull up accroding menu
+             CommitFinalGradesUI.showCommitFinalGradesUI();
          }
       });
 
