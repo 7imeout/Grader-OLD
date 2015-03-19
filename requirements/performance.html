@@ -34,21 +34,27 @@
     <li>
         Exporting into various file formats
     </li>
+    <li>
+        Submitting Scores to school server
+    </li>
+    <li>
+        Submitting and Retrieving files for electronic submissions
+    </li>
 </ul>
 <p>
     The time to execute all administrative commands must be instantaneous, except
     for any delays due to network transmission of data from the central host.
 <p>
-    In general, the performance of Calendar Tool commands that must access data
-    across a network is subject to potential network delays.  The Calendar Tool
+    In general, the performance of Grader Tool commands that must access data
+    across a network is subject to potential network delays.  The Grader Tool
     must transmit data as fast as is possible on any given network, but delays due
-    to external network circumstances are beyond the control of the Calendar Tool.
+    to external network circumstances are beyond the control of the Grader Tool.
 <p>
-    There are no specific requirements for the allowable size of a calendar in
-    terms of the number of scheduled items.  A Calendar on the order of thousands
+    There are no specific requirements for the allowable size of a grader in
+    terms of the number of assignments and submitted grades.  AGrader on the order of thousands
     of items is the maximum expected size during normal use.
 <p>
-    The maximum expected sizes of the Calendar Tool databases are the following:
+    The maximum expected sizes of the Grader Tool databases are the following:
 <ul>
     <li>
         user database -- up to tens of thousands of records
@@ -61,9 +67,9 @@ While there may on the order of tens of thousands of registered users, the
 expected maximum number of users connected to any given server at any given
 time is on the order of hundreds.
 <p>
-    The Calendar Tool must be able to operate with calendars and databases of sizes
+    The Grader Tool must be able to operate with graders and databases of sizes
     larger than these normal maximums.  However, the tool need not the meet the
-    previously-enumerated time performance requirements for calendars or databases
+    previously-enumerated time performance requirements for graders and databases
     larger than normal maximum sizes.
 
 
