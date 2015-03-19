@@ -44,7 +44,7 @@ public class AssignmentMenuItems implements MenuItemProvider {
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
             //add code here to pull up accroding menu
-            mnuNewAssignment.setEnabled(false);
+             AddAssignmentUI.showAddAssignmentUI();
          }
       });
 
@@ -86,7 +86,7 @@ public class AssignmentMenuItems implements MenuItemProvider {
    }
 
    private JMenuItem addEditAssignmentMenu() {
-      JMenuItem mnuEditAssCat = new JMenuItem("Edit Assignment ...");
+      JMenuItem mnuEditAssCat = new JMenuItem("Modify Assignment ...");
       mnuEditAssCat.setMnemonic('K');
       mnuEditAssCat.setAccelerator(
             KeyStroke.getKeyStroke('K', ActionEvent.ALT_MASK));
@@ -95,7 +95,7 @@ public class AssignmentMenuItems implements MenuItemProvider {
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
             ///add code here to pull up accroding menu
-
+            ModifyAssignmentUI.showModifyAssignmentUI();
          }
       });
 
