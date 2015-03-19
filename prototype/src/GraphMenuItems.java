@@ -18,7 +18,7 @@ public class GraphMenuItems implements MenuItemProvider {
    }
 
    private JMenuItem addHistographMenu() {
-      final JMenuItem mnuHistograph = new JMenuItem("Histograph");
+      final JMenuItem mnuHistograph = new JMenuItem("Histogram");
       mnuHistograph.setMnemonic('H');
       mnuHistograph.setAccelerator(
             KeyStroke.getKeyStroke('H', ActionEvent.ALT_MASK));
@@ -27,7 +27,7 @@ public class GraphMenuItems implements MenuItemProvider {
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
             //add code here to pull up accroding menu
-            mnuHistograph.setEnabled(false);
+            System.out.println("Histogram Clicked");
          }
       });
 
@@ -44,7 +44,7 @@ public class GraphMenuItems implements MenuItemProvider {
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
             ///add code here to pull up accroding menu
-            mnuPieChart.setEnabled(false);
+            System.out.println("Pie Chart Clicked");
          }
       });
 

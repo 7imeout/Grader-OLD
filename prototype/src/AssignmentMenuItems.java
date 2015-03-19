@@ -78,7 +78,7 @@ public class AssignmentMenuItems implements MenuItemProvider {
          // named classes in production code.
          public void actionPerformed(ActionEvent e) {
             ///add code here to pull up accroding menu
-
+            DeleteAssignmentUI.showDeleteAssignmentUI();
          }
       });
 
