@@ -44,9 +44,7 @@ public abstract class StudentRecord implements GraderObject {
     * <p/>
 
       pre:
-         grades != null &&
-         exists (int i; i >= 0 && i < grades.size();
-            grades.get(i).getAssignment().equals(assignment))
+         grades != null && grades.contains(assignment)
       post:
          grades.contains(return) &&
          grades'.size() == grades.size()
@@ -62,7 +60,7 @@ public abstract class StudentRecord implements GraderObject {
       pre:
          grades != null;
       post:
-         forall (AssignmentGrade ag; grades.contains(ag)
+         forall (AssignmentGrade ag; grades.contains(ag))
     */
    public abstract Collection<AssignmentGrade> getAllAssignmentGrades();
 
@@ -94,13 +92,10 @@ public abstract class StudentRecord implements GraderObject {
     * Sets the comment for the student.
     * @param studentComment comment for the student.
     * <p/>
-
       pre:
-         user != null &&
-         studentComment != null
+         student != null && studentComment != null;
       post:
-         comment' != null &&
-         comment'.equals(studentComment)
+         getStudentComment().equals(studentComment)
     */
    public abstract void setStudentComment(String studentComment);
 
@@ -110,7 +105,7 @@ public abstract class StudentRecord implements GraderObject {
     * <p/>
     *
       pre:
-         user != null
+         student != null
       post:
          // none
     */
@@ -124,7 +119,7 @@ public abstract class StudentRecord implements GraderObject {
     *
       pre:
          curve != null &&
-         user != null &&
+         student != null &&
          getRawPercentageGrade() >= 0
       post:
          // none
