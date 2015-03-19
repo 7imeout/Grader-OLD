@@ -36,7 +36,7 @@ public class ClassMenuItems implements MenuItemProvider {
             {
                 //add code here to pull up accroding menu
                mnuNew.setEnabled(false);
-               AddClassUI.showAddClassUI;
+               AddClassUI.showAddClassUI();
             }
         });
 
