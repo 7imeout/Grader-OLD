@@ -8,6 +8,7 @@ import java.util.Collection;
  */
 public abstract class RoleManager {
 
+   public static final Role INSTRUCTOR_ROLE = Role.INSTRUCTOR;
    /**
     * One-to-one assignment of <code>User</code> and a <code>Role</code>.
     */
@@ -74,22 +75,25 @@ public abstract class RoleManager {
     * Returns all <code>Role</code>s that a given <code>User</code> has.
     * @param user <code>User</code> to get <code>Roles</code> from.
     * @return all <code>Role</code>s that the <code>User</code> has.
+      pre:
+          //none
+
+      post:
+         return != null
     */
    abstract Collection<Role> getRoles(User user);
 
    /**
     * Accessor for the <code>Permissions</code>s a given <code>User</code> has.
-    * @param u the <code>User</code> to find <code>Permissions</code>s for.
+    * @param user the <code>User</code> to find <code>Permissions</code>s for.
     * @return all <code>Permissions</code>s the given <code>User</code> has.
-    * <p/>
 
       pre:
          // none
       post:
-         if (getRoles(u).contains(Role.INSTRUCTOR))
-            forall(Permission p; return.contains(p))
+         return != null
     */
-   abstract Collection<Permission> getPerms(User u);
+   abstract Collection<Permission> getPerms(User user);
 
    /**
     * Grants a <code>Permission</code> to the given <code>Role</code>.
