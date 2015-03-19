@@ -6,38 +6,39 @@ import java.util.ArrayList;
 
 public class HelpMenuItems implements MenuItemProvider {
 
-    private ArrayList<JMenuItem> helpMenuItems;
+   private ArrayList<JMenuItem> helpMenuItems;
 
-    public HelpMenuItems() {
-        helpMenuItems = new ArrayList<JMenuItem>();
-        createMenuItems();
-    }
+   public HelpMenuItems() {
+      helpMenuItems = new ArrayList<JMenuItem>();
+      createMenuItems();
+   }
 
-    private void createMenuItems(){
-        studentMenuItems.add(aboutMenu());
-    }
+   private void createMenuItems() {
+      studentMenuItems.add(aboutMenu());
+   }
 
-    private JMenuItem aboutMenu()
-    {
-        JMenuItem mnuAbout = new JMenuItem("About");
-        mnuAbout.setMnemonic('N');
-        mnuAbout.setAccelerator(
-                KeyStroke.getKeyStroke('N', ActionEvent.ALT_MASK));
-        mnuAbout.addActionListener(new ActionListener()
-        {
-            // Anonymous inner classes are used here for brevity, but should be
-            // named classes in production code.
-            public void actionPerformed(ActionEvent e)
-            {
-                AboutDialogUI.showAboutDialogUI();
-            }
-        });
+   private JMenuItem aboutMenu() {
+      JMenuItem mnuAbout = new JMenuItem("About");
+      mnuAbout.setMnemonic('N');
+      mnuAbout.setAccelerator(
+            KeyStroke.getKeyStroke('N', ActionEvent.ALT_MASK));
+      mnuAbout.addActionListener(new ActionListener() {
+         // Anonymous inner classes are used here for brevity, but should be
+         // named classes in production code.
+         public void actionPerformed(ActionEvent e) {
+            AboutDialogUI.showAboutDialogUI();
+         }
+      });
 
-        return mnuAbout;
-    }
+      return mnuAbout;
+   }
 
 
-    public ArrayList<JMenuItem> getMenuItems(){
-        return helpMenuItems;
-    }
+   public ArrayList<JMenuItem> getMenuItems() {
+      return helpMenuItems;
+   }
+
+   public ArrayList<JMenuItem> getContextMenuItems() {
+      return new ArrayList<JMenuItem>();
+   }
 }
