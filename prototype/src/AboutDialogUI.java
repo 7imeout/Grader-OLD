@@ -17,31 +17,31 @@ public class AboutDialogUI extends JDialog {
 
         panel.add(Box.createRigidArea(new Dimension(0, 0)));
 
-        JPanel studentDeletePanel = new JPanel();
-        studentDeletePanel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        studentDeletePanel.setLayout(new BoxLayout(studentDeletePanel, BoxLayout.X_AXIS));
+        JPanel aboutPanel = new JPanel();
+        aboutPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        aboutPanel.setLayout(new BoxLayout(aboutPanel, BoxLayout.X_AXIS));
 
-        studentDeletePanel.add(new JLabel("Grader Project"));
-        studentDeletePanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        aboutPanel.add(new JLabel("Grader Project"));
+        aboutPanel.add(Box.createRigidArea(new Dimension(10, 0)));
 
-        panel.add(studentDeletePanel);
+        panel.add(aboutPanel);
 
 
         JPanel bottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
 
 
-        JButton cancelButton = new JButton("Close");
-        cancelButton.setBounds(0, 0, 0, 0);
-        cancelButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                dispose();
-            }
+        JButton closeButton = new JButton("Close");
+        closeButton.setBounds(0, 0, 0, 0);
+        closeButton.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent event) {
+              dispose();
+           }
         });
 
         panel.add(Box.createRigidArea(new Dimension(0, 15)));
 
-        bottom.add(cancelButton);
+        bottom.add(closeButton);
         bottom.add(Box.createRigidArea(new Dimension(0, 0)));
 
         panel.add(bottom);

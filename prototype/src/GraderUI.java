@@ -45,6 +45,7 @@ public class GraderUI extends JFrame {
       addAllMenuItems(student, new StudentMenuItems());
       addAllMenuItems(graph, new GraphMenuItems());
       addAllMenuItems(assignment, new AssignmentMenuItems());
+      addAllMenuItems(help, new HelpMenuItems());
 
 
       menuBar.add(file);
