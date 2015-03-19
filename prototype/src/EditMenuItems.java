@@ -219,4 +219,9 @@ public class EditMenuItems implements  MenuItemProvider {
     public ArrayList<JMenuItem> getMenuItems(){
         return editMenuItems;
     }
+
+   @Override
+   public ArrayList<JMenuItem> getContextMenuItems() {
+      return new ArrayList<JMenuItem>();
+   }
 }

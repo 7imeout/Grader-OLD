@@ -17,7 +17,6 @@ public class AddCategoryUI extends JDialog {
 
 		panel.add(Box.createRigidArea(new Dimension(0, 10)));
 
-		//combo box 
 		JPanel categorySelectPanel = new JPanel();
         categorySelectPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
         categorySelectPanel.setLayout(new BoxLayout(categorySelectPanel, BoxLayout.X_AXIS));
@@ -34,13 +33,10 @@ public class AddCategoryUI extends JDialog {
         categorySelectPanel.add(categorySelectBox);
         categorySelectPanel.add(Box.createRigidArea(new Dimension(110, 0)));
 
-        
-
         panel.add(categorySelectPanel);
 
         panel.add(Box.createRigidArea(new Dimension(10, 0)));
 
-        //end of combo box
 
 		JPanel catNamePanel = new JPanel();
         catNamePanel.setAlignmentX(Component.CENTER_ALIGNMENT);

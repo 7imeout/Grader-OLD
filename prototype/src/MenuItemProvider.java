@@ -11,4 +11,10 @@ public interface MenuItemProvider {
     * @return all menu items this provider provides.
     */
    public ArrayList<JMenuItem> getMenuItems();
+
+   /**
+    * Returns all right-click context menu items this provider provides.
+    * @return all right-click context menu items this provider provides.
+    */
+   public ArrayList<JMenuItem> getContextMenuItems();
 }

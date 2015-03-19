@@ -58,10 +58,8 @@ public class GraderUI extends JFrame {
       this.setJMenuBar(menuBar);
    }
 
-   private void addAllMenuItems(JMenu menu, MenuItemProvider provider)
-   {
-      for (JMenuItem item : provider.getMenuItems())
-      {
+   private void addAllMenuItems(JMenu menu, MenuItemProvider provider) {
+      for (JMenuItem item : provider.getMenuItems()) {
          menu.add(item);
       }
    }

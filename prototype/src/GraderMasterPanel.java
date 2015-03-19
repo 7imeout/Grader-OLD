@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 /**
  *
  * @author mryu
@@ -42,175 +46,178 @@ public class GraderMasterPanel extends javax.swing.JPanel {
         jComboBox2 = new javax.swing.JComboBox();
         jButton3 = new javax.swing.JButton();
 
+        gradeBookTable.addMouseListener(tableMouseListener);
+        gradeBookTable.getTableHeader().addMouseListener(headerMouseListener);
         gradeBookTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"John Doe", "00000001", "(empty)", 0, "F"},
-                {"Jane Doe", "00000002", "(empty)", 0, "F"},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {"Name", "ID", "Capstone", "Final Exam", "Percent", "Letter"},
+                {"John Doe", "00000001", 0, 0, "0%", "F"},
+                {"Jane Doe", "00000002", 0, 0, "0%", "F"}
             },
             new String [] {
-                "Name", "ID", "Cateogry", "%", "Letter"
+                "Student", "Student", "Project", "Test", "Grade", "Grade"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class,
+                java.lang.Object.class, java.lang.Object.class,
+                java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(gradeBookTable);
+       jScrollPane1.setViewportView(gradeBookTable);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
-                .addContainerGap())
+       jPanel3.setLayout(jPanel3Layout);
+       jPanel3Layout.setHorizontalGroup(
+             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                   .addGroup(jPanel3Layout.createSequentialGroup()
+                         .addContainerGap()
+                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+                         .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
-                .addContainerGap())
+                  .addContainerGap()
+                  .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
+                  .addContainerGap())
         );
 
-        statsTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Statistics", "", "Category", "%", "Letter"
+       statsTable.setModel(new javax.swing.table.DefaultTableModel(
+             new Object[][]{
+                   {null, null, null, null, null},
+                   {null, null, null, null, null},
+                   {null, null, null, null, null},
+                   {null, null, null, null, null}
+             },
+             new String[]{
+                   "Statistics", "", "Category", "%", "Letter"
             }
         ));
-        jScrollPane2.setViewportView(statsTable);
+       jScrollPane2.setViewportView(statsTable);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
+       jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+                  .addComponent(jScrollPane2)
+                  .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                .addContainerGap())
+       jPanel4Layout.setVerticalGroup(
+             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                   .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                         .addContainerGap()
+                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                         .addContainerGap())
         );
 
-        trendGraphsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Trend Graphs"));
+       trendGraphsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Trend Graphs"));
 
         javax.swing.GroupLayout trendGraphsPanelLayout = new javax.swing.GroupLayout(trendGraphsPanel);
         trendGraphsPanel.setLayout(trendGraphsPanelLayout);
         trendGraphsPanelLayout.setHorizontalGroup(
-            trendGraphsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 151, Short.MAX_VALUE)
+              trendGraphsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGap(0, 151, Short.MAX_VALUE)
         );
         trendGraphsPanelLayout.setVerticalGroup(
-            trendGraphsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+              trendGraphsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(trendGraphsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+       jPanel2.setLayout(jPanel2Layout);
+       jPanel2Layout.setHorizontalGroup(
+             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                   .addGroup(jPanel2Layout.createSequentialGroup()
+                         .addContainerGap()
+                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                               .addGroup(jPanel2Layout.createSequentialGroup()
+                                     .addGap(6, 6, 6)
+                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                               .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addComponent(trendGraphsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                         .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(trendGraphsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+       jPanel2Layout.setVerticalGroup(
+             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                   .addGroup(jPanel2Layout.createSequentialGroup()
+                         .addContainerGap()
+                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                               .addComponent(trendGraphsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                               .addGroup(jPanel2Layout.createSequentialGroup()
+                                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                         .addContainerGap())
+       );
 
-        courseTabbedPane.addTab("(Untitled Course)", jPanel2);
+       courseTabbedPane.addTab("(Untitled Course)", jPanel2);
 
-        quickMenuPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Quick Menu"));
+       quickMenuPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Quick Menu"));
 
-        addNewButton.setText("Add New");
-        addNewButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addNewButtonActionPerformed(evt);
+       addNewButton.setText("Add New");
+       addNewButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(java.awt.event.ActionEvent evt) {
+             addNewButtonActionPerformed(evt);
             }
         });
 
         selectCategoryCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Category ..." }));
         selectCategoryCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectCategoryComboActionPerformed(evt);
+               selectCategoryComboActionPerformed(evt);
             }
         });
 
         jButton2.setText("Publish Grades");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seletect Target ...", "to Students", "to School" }));
+       jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Seletect Target ...", "to Students", "to School" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("View Assignment Submissions");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+       jButton3.setText("View Assignment Submissions");
+       jButton3.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(java.awt.event.ActionEvent evt) {
+             jButton3ActionPerformed(evt);
             }
         });
 
         javax.swing.GroupLayout quickMenuPanelLayout = new javax.swing.GroupLayout(quickMenuPanel);
         quickMenuPanel.setLayout(quickMenuPanelLayout);
         quickMenuPanelLayout.setHorizontalGroup(
-            quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(quickMenuPanelLayout.createSequentialGroup()
-                .addComponent(addNewButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(selectCategoryCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addContainerGap())
+              quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(quickMenuPanelLayout.createSequentialGroup()
+                          .addComponent(addNewButton)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                          .addComponent(selectCategoryCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                          .addGap(45, 45, 45)
+                          .addComponent(jButton2)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                          .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                          .addComponent(jButton3)
+                          .addContainerGap())
         );
         quickMenuPanelLayout.setVerticalGroup(
-            quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, quickMenuPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addNewButton)
-                    .addComponent(selectCategoryCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addContainerGap())
+              quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, quickMenuPanelLayout.createSequentialGroup()
+                          .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                          .addGroup(quickMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(addNewButton)
+                                .addComponent(selectCategoryCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton2)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton3))
+                          .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -219,18 +226,18 @@ public class GraderMasterPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(courseTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(quickMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                  .addContainerGap()
+                  .addComponent(quickMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(quickMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(courseTabbedPane)
-                .addContainerGap())
+                  .addContainerGap()
+                  .addComponent(quickMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(courseTabbedPane)
+                  .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -251,8 +258,8 @@ public class GraderMasterPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addNewButton;
     private javax.swing.JTabbedPane courseTabbedPane;
@@ -270,4 +277,72 @@ public class GraderMasterPanel extends javax.swing.JPanel {
     private javax.swing.JTable statsTable;
     private javax.swing.JPanel trendGraphsPanel;
     // End of variables declaration//GEN-END:variables
+
+
+   private static final int ASMT_ROW = 0;
+
+   private static final int NAME_COL = 0;
+   private static final int EMPL_ID_COL = 1;
+   private static final int PROJ_COL = 2;
+   private static final int TEST_COL = 3;
+
+   private JPopupMenu contextMenu = new JPopupMenu("Context Menu");
+
+   /* Listener to respond to mouse clicks on the table */
+   private MouseAdapter tableMouseListener = new MouseAdapter()
+   {
+      public void mouseReleased(MouseEvent ev)
+      {
+         // obtain the selected cell coordinates
+         int col = gradeBookTable.columnAtPoint(ev.getPoint());
+         int row = gradeBookTable.rowAtPoint(ev.getPoint());
+         // Is it a right mouse click?
+         if (SwingUtilities.isRightMouseButton(ev))
+         {
+            // System.out.println("right click");
+            // System.out.println("row, col = " + row + ", " + col);
+            if (row == ASMT_ROW && (col == PROJ_COL || col == TEST_COL)) {
+               contextMenu = new JPopupMenu("Context: Assignment");
+               for (JMenuItem item : new AssignmentMenuItems().
+                     getContextMenuItems()) {
+                  contextMenu.add(item);
+               }
+               contextMenu.show(ev.getComponent(), ev.getX(), ev.getY());
+            }
+            else if (row != ASMT_ROW && (col == NAME_COL ||
+                  col == EMPL_ID_COL)) {
+               contextMenu = new JPopupMenu("Context: Student");
+               for (JMenuItem item : new StudentMenuItems().
+                     getContextMenuItems()) {
+                  contextMenu.add(item);
+               }
+               contextMenu.show(ev.getComponent(), ev.getX(), ev.getY());
+            }
+         }
+         repaint();
+      }
+   };
+
+   /* Listener to respond to mouse clicks on the table */
+   private MouseAdapter headerMouseListener = new MouseAdapter()
+   {
+      public void mouseReleased(MouseEvent ev)
+      {
+         // obtain the selected cell coordinates
+         int col = gradeBookTable.columnAtPoint(ev.getPoint());
+         // Is it a right mouse click?
+         if (SwingUtilities.isRightMouseButton(ev))
+         {
+            if (col == PROJ_COL || col == TEST_COL) {
+               contextMenu = new JPopupMenu("Context: Category");
+               for (JMenuItem item : new AssignmentMenuItems().
+                     getCategoryContextMenuItems()) {
+                  contextMenu.add(item);
+               }
+               contextMenu.show(ev.getComponent(), ev.getX(), ev.getY());
+            }
+         }
+         repaint();
+      }
+   };
 }
